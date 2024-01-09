@@ -1,0 +1,4378 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nike. Just Do It. 나이키 코리아</title>
+		<link rel="stylesheet" href="./lib/setup.css" type="text/css" />
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<script src="./lib/jquery.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gasoek+One&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Questrial&display=swap');
+			body {
+				font-family: 'Noto Sans KR', sans-serif;
+				color: #111;
+				word-break: keep-all;
+			}
+			span {
+				font-size: inherit;
+			}
+			button {
+				font-family: inherit;
+			}
+			header {
+				position: relative;
+			}
+			.hd1 {
+				background-color: #f5f5f5;
+				width: 100%;
+				height: 36px;
+			}
+			.hd1 .hd1_wrap {
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0 38px 0 36px;
+			}
+			.hd1 .hd1_wrap .hd1_logobox {
+			}
+			.hd1 .hd1_wrap .hd1_logobox li {
+				padding: 0 12px;
+			}
+			.hd1 .hd1_wrap .hd1_logobox svg:hover {
+				opacity: 0.5;
+			}
+			.hd1 .hd1_wrap .hd1_t {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+			}
+			.hd1 .hd1_wrap .hd1_t > span {
+				background-color: #111;
+				width: 1px;
+				height: 10px;
+			}
+			.hd1 .hd1_wrap .hd1_t > li {
+				padding: 0 13px;
+				height: 100%;
+			}
+			.hd1 .hd1_wrap .hd1_t > li > a {
+				color: #111;
+				font-size: 12px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+			}
+			.hd1 .hd1_wrap .hd1_t > li > a:hover {
+				color: #9b9b9b;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) {
+				position: relative;
+				z-index: 99;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) .helpmenu {
+				position: absolute;
+				top: 36px;
+				right: 0;
+				width: 260px;
+				max-height: 0px;
+				overflow: hidden;
+				border-radius: 10px;
+				background-color: white;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3):hover .helpmenu {
+				max-height: 500px;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) .helpmenu .hm_wrap {
+				padding: 30px 20px;
+				text-align: left;
+				position: relative;
+				z-index: 99;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) .helpmenu .hm_wrap span {
+				display: inline-block;
+				padding: 0 0 15px 0;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) .helpmenu .hm_wrap span a {
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) .helpmenu .hm_wrap ul li {
+				width: 100%;
+				padding: 5px 0;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) .helpmenu .hm_wrap ul li a {
+				font-size: 15px;
+				color: #757575;
+			}
+			.hd1 .hd1_wrap .hd1_t li:nth-child(3) .helpmenu .hm_wrap ul li a:hover {
+				color: #111;
+			}
+
+			.hd2_p {
+				height: 60px;
+			}
+			.hd2 {
+				width: 100%;
+				height: 60px;
+				position: relative;
+				z-index: 10;
+			}
+			.hd2.m2 {
+				position: fixed;
+				top: 0;
+			}
+			.hd2 .hd2_wrap {
+				padding: 0 38px 0 36px;
+				max-width: 1920px;
+				height: 60px;
+
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.hd2 .hd2_wrap .logo {
+				margin-left: 12px;
+				position: relative;
+				z-index: 11;
+			}
+			.hd2 .hd2_wrap .logo a {
+				margin: 1px 0;
+				width: 59px;
+				height: 59px;
+			}
+			.hd2 .hd2_wrap .logo a:hover {
+				opacity: 0.5;
+			}
+			.hd2 .hd2_wrap .logo a svg {
+				width: 100%;
+				height: 100%;
+				transform: scale(1.33);
+			}
+			.hd2 .hd2_wrap .menubox {
+				width: 100%;
+			}
+			.hd2 .hd2_wrap .menubox .menu {
+				height: 60px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: white;
+				z-index: 10;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp {
+				width: calc(100% - 680px);
+				position: absolute;
+				top: 60%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 11;
+				height: 60px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp li:nth-child(7) a {
+				padding-right: 0;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp > li {
+				/* hover하면 border값 만큼 박스가 움직이는걸 방지하기위해 */
+				border-bottom: 2px solid transparent;
+			}
+
+			.hd2 .hd2_wrap .menubox .menu .menu_warp > li:hover {
+				border-bottom: 2px solid black;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp > li > a {
+				width: 100%;
+				font-size: 16px;
+				font-weight: 700;
+				padding: 12px 12.5px;
+				color: #111;
+			}
+
+			.hd2 .hd2_wrap .menubox .menu .menu_warp li:first-child:hover > .submenu1 {
+				max-height: 500px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp li:nth-child(2):hover > .submenu2 {
+				max-height: 1000px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp li:nth-child(3):hover > .submenu3 {
+				max-height: 800px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp li:nth-child(4):hover > .submenu4 {
+				max-height: 1200px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp li:nth-child(5):hover > .submenu5 {
+				max-height: 500px;
+			}
+
+			.hd2 .hd2_wrap .menubox .menu .sbm_bg {
+				width: 100vw;
+				height: 100vh;
+				max-height: 0;
+				background: rgba(0, 0, 0, 0.25);
+				backdrop-filter: blur(4px);
+				-webkit-backdrop-filter: blur(4px);
+
+				position: fixed;
+				top: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				pointer-events: none;
+			}
+			.hd2 .hd2_wrap .menubox .menu .menu_warp li:hover > .sbm_bg {
+				max-height: 100vh;
+			}
+
+			.hd2 .hd2_wrap .menubox .menu .sbm {
+				width: 100vw;
+				position: absolute;
+				top: 50px;
+				left: 50%;
+				max-height: 0;
+				overflow: hidden;
+				transform: translateX(-50%);
+				background-color: white;
+				z-index: 10;
+			}
+
+			.hd2 .hd2_wrap .menubox .menu .sbm .sbm_wrap {
+				width: 60%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				text-align: left;
+			}
+			.hd2 .hd2_wrap .menubox .menu .sbm .sbm_wrap > li > a {
+				font-size: 16px;
+				font-weight: bold;
+				padding: 40px 0 10px 0;
+			}
+			.hd2 .hd2_wrap .menubox .menu .sbm .sbm_wrap li ul li {
+				width: 100%;
+				padding: 4px 0;
+			}
+			.hd2 .hd2_wrap .menubox .menu .sbm .sbm_wrap li ul li a {
+				color: #757575;
+				font-weight: bold;
+			}
+			.hd2 .hd2_wrap .menubox .menu .sbm .sbm_wrap li ul li a:hover {
+				color: #111;
+			}
+			.hd2 .hd2_wrap .menubox .menu .sbm .sbm_wrap li ul li:last-child {
+				padding-bottom: 50px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .submenu2 .sbm_wrap > li:nth-child(6) {
+				grid-column: 2/3;
+			}
+			.hd2 .hd2_wrap .menubox .menu .submenu2 .sbm_wrap li ul li:last-child {
+				padding-bottom: 0px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .submenu2 .sbm_wrap > li:nth-child(6) {
+				padding-bottom: 50px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .submenu4.sbm .sbm_wrap {
+				width: 50%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				text-align: left;
+			}
+			.hd2 .hd2_wrap .menubox .menu .submenu4 .sbm_wrap li ul li:last-child {
+				padding-bottom: 0px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .submenu4 .sbm_wrap > li:nth-child(2) {
+				padding-bottom: 50px;
+			}
+			.hd2 .hd2_wrap .menubox .menu .submenu5.sbm .sbm_wrap {
+				width: 50%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				text-align: left;
+			}
+
+			.hd2 .hd2_wrap .search {
+				display: flex;
+				justify-content: right;
+				width: 100%;
+			}
+			.hd2 .hd2_wrap .search .search_wrap {
+				background-color: #f5f5f5;
+				border-radius: 100px;
+				position: relative;
+				z-index: 10;
+			}
+
+			.hd2 .hd2_wrap .search .search_wrap button {
+				border: none;
+				background-color: transparent;
+				padding: 8px 8px;
+				cursor: pointer;
+				border-radius: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.hd2 .hd2_wrap .search .search_wrap button:hover {
+				background-color: #dadada;
+			}
+			.hd2 .hd2_wrap .search .search_wrap a svg {
+			}
+			.hd2 .hd2_wrap .search .search_wrap input {
+				width: 180px;
+				border: none;
+				background-color: transparent;
+				outline: none;
+				padding: 8px 48px;
+				border-radius: 100px;
+				font-weight: bold;
+				font-family: 'Noto Sans KR', sans-serif;
+				font-size: 16px;
+				opacity: 0.3;
+			}
+			.hd2 .hd2_wrap .search .search_wrap input:hover {
+				opacity: 1;
+				background-color: #dadada;
+			}
+			.search2 {
+				width: 100vw;
+				max-height: 0px;
+				overflow: hidden;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: white;
+				z-index: 999;
+			}
+			.search2 .search2_wrap {
+				padding: 0 38px 0 36px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.search2 .search2_wrap .logo {
+				margin-left: 12px;
+				position: relative;
+				z-index: 11;
+			}
+			.search2 .search2_wrap .logo a {
+				margin: 1px 0;
+				width: 59px;
+				height: 59px;
+			}
+			.search2 .search2_wrap .logo a:hover {
+				opacity: 0.5;
+			}
+			.search2 .search2_wrap .logo a svg {
+				width: 100%;
+				height: 100%;
+				transform: scale(1.33);
+			}
+			.search2 .search2_wrap .search2Box {
+				background-color: #f5f5f5;
+				border-radius: 100px;
+				position: relative;
+				z-index: 10;
+				width: 100%;
+				max-width: 656px;
+			}
+			.search2 .search2_wrap .search2Box button {
+				border: none;
+				background-color: transparent;
+				padding: 8px 8px;
+				cursor: pointer;
+				border-radius: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.search2 .search2_wrap .search2Box button:hover {
+				background-color: #dadada;
+			}
+			.search2 .search2_wrap .search2Box input {
+				width: 100%;
+				border: none;
+				background-color: transparent;
+				outline: none;
+				padding: 8px 48px;
+				border-radius: 100px;
+				font-weight: bold;
+				font-family: 'Noto Sans KR', sans-serif;
+				font-size: 16px;
+				opacity: 1;
+			}
+			.search2 .search2_wrap .search2Box input::placeholder {
+				opacity: 0.3;
+			}
+			.search2 .search2_wrap .search2Box input:hover {
+				opacity: 1;
+				background-color: #dadada;
+			}
+			.search2 .search2Text {
+				width: 100%;
+				background-color: white;
+			}
+			.search2 .search2Text .search2Text_wrap {
+				margin: 0 auto;
+				width: 100%;
+				max-width: 656px;
+				text-align: left;
+			}
+			.search2 .search2Text .search2Text_wrap li {
+				width: 100%;
+				margin: 3px 0;
+			}
+			.search2 .search2Text .search2Text_wrap li:first-child {
+				color: #707072;
+				font-size: 16px;
+				margin: 18px 0 12px 0;
+			}
+			.search2 .search2Text .search2Text_wrap li:last-child {
+				padding-bottom: 40px;
+			}
+			.search2 .search2Text .search2Text_wrap li a {
+				font-size: 20px;
+			}
+			.search2 .search2_wrap .cancel {
+				margin-right: 30px;
+				font-size: 16px;
+				border: none;
+				background-color: white;
+				cursor: pointer;
+			}
+			.search2bg {
+				width: 100vw;
+				height: 100vh;
+				max-height: 0;
+				background: rgba(0, 0, 0, 0.25);
+				backdrop-filter: blur(4px);
+				-webkit-backdrop-filter: blur(4px);
+
+				position: fixed;
+				top: 0px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 1;
+				/* pointer-events: none; */
+			}
+
+			.hd2 .hd2_wrap .btn {
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+				z-index: 11;
+			}
+			.hd2 .hd2_wrap .btn .bmark {
+				margin: 0 20px;
+				background-color: transparent;
+				border-radius: 100px;
+			}
+
+			.hd2 .hd2_wrap .btn .bmark:hover {
+				background-color: #dadada;
+			}
+			.hd2 .hd2_wrap .btn .basket {
+				background-color: transparent;
+				border-radius: 100px;
+			}
+			.hd2 .hd2_wrap .btn .basket:hover {
+				background-color: #dadada;
+			}
+			.hd2 .hd2_wrap .btn .login {
+				display: none;
+				background-color: transparent;
+
+				margin: 0 8px;
+				border-radius: 100px;
+			}
+			.hd2 .hd2_wrap .btn .login button,
+			.bmark button,
+			.mmenu button,
+			.basket button {
+				padding: 6px;
+			}
+			.hd2 .hd2_wrap .btn .login:hover {
+				background-color: #dadada;
+			}
+			.hd2 .hd2_wrap .btn .mmenu {
+				display: none;
+				background-color: transparent;
+				margin: 0 0 0 8px;
+				border-radius: 100px;
+			}
+			.hd2 .hd2_wrap .btn button {
+				background: none;
+				border: none;
+			}
+			.hd2 .hd2_wrap .btn .mmenu:hover {
+				background-color: #dadada;
+			}
+
+			.hd3 {
+				width: 100%;
+				height: 58px;
+				background-color: #f5f5f5;
+				border-bottom: 1px solid #dbdbdb;
+			}
+			.hd3.mm1 {
+				height: 118px;
+			}
+
+			.m_menu {
+				display: none;
+				position: fixed;
+				top: 0;
+				right: 0;
+				z-index: 999;
+				width: 300px;
+				height: 100vh;
+				background-color: white;
+				overflow: auto;
+			}
+			.m_menu .m_menu_wrap {
+				padding: 50px 30px 150px 30px;
+			}
+			.m_menu .m_menu_wrap .close {
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 15px;
+				right: 22px;
+				cursor: pointer;
+				padding: 15px;
+				border-radius: 50px;
+			}
+
+			.m_menu .m_menu_wrap .close:hover {
+				background: #dadada;
+			}
+			.m_menu .m_menu_wrap .close span {
+				position: absolute;
+				display: inline-block;
+				width: 1.5px;
+				height: 20px;
+				background-color: #111;
+				top: 50%;
+				left: 50%;
+			}
+			.m_menu .m_menu_wrap .close span:first-child {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+			.m_menu .m_menu_wrap .close span:last-child {
+				transform: translate(-50%, -50%) rotate(135deg);
+			}
+			.m_menu .m_menu_wrap button {
+				cursor: pointer;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background: none;
+				border: none;
+				padding: 5px 0;
+			}
+			.m_menu .m_menu_wrap button div {
+				font-size: 20px;
+				font-weight: 500;
+			}
+			.m_menu .m_menu_wrap button div i {
+				font-size: 20px;
+				padding: 8px 0;
+			}
+			.m_menu .m_menu_wrap button .btn_label {
+			}
+			.m_menu .m_menu_wrap .logo {
+				padding-top: 14px;
+			}
+			.m_menu .m_menu_wrap .logo a {
+				display: flex;
+				justify-content: left;
+				align-items: center;
+				width: 100%;
+				padding: 5px 0;
+			}
+			.m_menu .m_menu_wrap .logo a:hover {
+				color: #111111ab;
+			}
+			.m_menu .m_menu_wrap .logo > a p {
+				font-size: 16px;
+				font-weight: bold;
+				padding-left: 15px;
+			}
+			.m_menu .m_menu_wrap .text {
+				text-align: left;
+				margin-top: 40px;
+			}
+			.m_menu .m_menu_wrap .text p {
+				font-size: 20px;
+				color: #707072;
+				font-weight: 500;
+				line-height: 34px;
+			}
+			.m_menu .m_menu_wrap .text p a {
+				font-size: 20px;
+				color: #111;
+				font-weight: 500;
+				line-height: 34px;
+			}
+			.m_menu .m_menu_wrap .text > a {
+				font-weight: 500;
+				padding: 6px 20px 8px;
+				font-size: 16px;
+				border-radius: 50px;
+				margin-top: 20px;
+			}
+			.m_menu .m_menu_wrap .text .sign {
+				background: #111;
+				color: white;
+			}
+			.m_menu .m_menu_wrap .text .sign:hover {
+				background: #707072;
+			}
+			.m_menu .m_menu_wrap .text .log {
+				background: white;
+				border: 1px solid #70707269;
+			}
+			.m_menu .m_menu_wrap .text .log:hover {
+				border: 1px solid #111;
+			}
+			.m_menu .m_menu_wrap .box {
+				margin-top: 60px;
+			}
+			.m_menu .m_menu_wrap .box li {
+				width: 100%;
+				padding: 10px 0;
+			}
+			.m_menu .m_menu_wrap .box li a {
+				display: flex;
+				justify-content: left;
+				align-items: center;
+			}
+			.m_menu .m_menu_wrap .box li a p {
+				font-size: 16px;
+				font-weight: 500;
+				margin-left: 10px;
+			}
+			.m_menubg {
+				display: none;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.25);
+				backdrop-filter: blur(4px);
+				-webkit-backdrop-filter: blur(4px);
+				z-index: 10;
+			}
+			.mbimg {
+				display: none;
+			}
+			.main1 {
+				margin-bottom: 80px;
+			}
+			.main1 .main1_1 {
+				padding: 0 38px 0 36px;
+				position: relative;
+				margin-bottom: 100px;
+			}
+			.main1 .main1_1 .main1_1_wrap {
+			}
+			.main1 .main1_1 .main1_1_wrap > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.main1 .main1_1 .main1_1_wrap img {
+				width: 100%;
+			}
+
+			.main1 .main1_1 .main1_1_wrap .title {
+				margin-top: 48px;
+				color: #111;
+			}
+			.main1 .main1_1 .main1_1_wrap .title .name {
+				font-size: 48px;
+				font-weight: 900;
+			}
+			.main1 .main1_1 .main1_1_wrap .title .sub {
+				font-size: 16px;
+				font-weight: 400;
+				margin: 24px 0;
+			}
+			.main1 .main1_1 .main1_1_wrap .title .btn {
+			}
+			.main1 .main1_1 .main1_1_wrap .title .btn a {
+				font-size: 16px;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+				margin: 6px 6px 0 0;
+				position: relative;
+				z-index: 2;
+			}
+			.main1 .main1_1 .main1_1_wrap .title .btn a:hover {
+				background: #727272;
+			}
+
+			.main1_2 {
+				padding: 0 38px 0 36px;
+				position: relative;
+			}
+			.main1_2 > p {
+				font-size: 24px;
+				font-weight: 500;
+				text-align: left;
+				padding: 20px 0;
+			}
+			.main1_2 .slider {
+				margin: 0 auto;
+				width: 100%;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			/* .main1_2 .swiper-container {
+				padding-bottom: 20px;
+			} */
+
+			.main1_2 .swiper-scrollbar {
+				background: transparent;
+			}
+			.main1_2 .swiper-scrollbar.swiper-scrollbar-horizontal {
+				height: 8px;
+				width: 95.8% !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main1_2 .swiper-container-horizontal > .swiper-scrollbar {
+				border-radius: 10px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main1_2 .swiper-wrapper img {
+				width: 100%;
+			}
+			.main1_2 .slider .swiper-slide a {
+			}
+			.main1_2 .slider .swiper-slide .title {
+				text-align: left;
+				padding-top: 16px;
+				margin-bottom: 24px;
+				width: 85%;
+			}
+			.main1_2 .slider .swiper-slide .title .name {
+				font-size: 20px;
+				font-weight: 500;
+				margin: 0 0 8px;
+			}
+			.main1_2 .slider .swiper-slide .title .sub {
+				font-size: 16px;
+				margin: 8px 0 0;
+			}
+			.main1_2 .slider .swiper-button-prev,
+			.swiper-button-next {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: #e5e5e5;
+				/* opacity: 0.5; */
+				padding: 15px 5px;
+				color: #111 !important;
+				top: 30px;
+				left: unset;
+				right: 36px;
+			}
+			.main1_2 .slider .swiper-button-prev {
+				right: 100px;
+			}
+			.main1_2 .slider .swiper-button-prev:after,
+			.swiper-button-next:after {
+				font-size: 1.1rem !important;
+				font-weight: 500 !important;
+			}
+
+			.main2 {
+				position: relative;
+			}
+			.main2 .main2_wrap {
+				padding: 0 38px 0 36px;
+			}
+			.main2 .main2_wrap .main2_1 {
+				margin-bottom: 100px;
+				position: relative;
+			}
+			.main2 .main2_wrap .main2_1 > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.main2 .main2_wrap .main2_1 > img {
+				width: 100%;
+			}
+			.main2 .main2_wrap .main2_1 .title {
+				margin-top: 48px;
+				color: #111;
+			}
+			.main2 .main2_wrap .main2_1 .title .name {
+				font-size: 48px;
+				font-weight: 900;
+			}
+			.main2 .main2_wrap .main2_1 .title span {
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.main2 .main2_wrap .main2_1 .title .sub {
+				font-size: 16px;
+				font-weight: 400;
+				margin: 40px 0 24px 0;
+			}
+			.main2 .main2_wrap .main2_1 .title .btn a {
+				font-size: 16px;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+				margin: 6px 6px 0 0;
+				position: relative;
+				z-index: 2;
+			}
+			.main2 .main2_wrap .main2_1 .title .btn a:hover {
+				background: #727272;
+			}
+			.main2 .main2_wrap .main2_2 {
+				margin-bottom: 100px;
+				position: relative;
+			}
+			.main2 .main2_wrap .main2_2 > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.main2 .main2_wrap .main2_2 > img {
+				width: 100%;
+			}
+			.main2 .main2_wrap .main2_2 .title {
+				margin-top: 48px;
+				color: #111;
+			}
+			.main2 .main2_wrap .main2_2 .title .name {
+				font-size: 48px;
+				font-weight: 900;
+			}
+			.main2 .main2_wrap .main2_2 .title .name span {
+				font-size: 16px;
+			}
+			.main2 .main2_wrap .main2_2 .title .sub {
+				font-size: 16px;
+				font-weight: 400;
+				margin: 24px 0;
+			}
+			.main2 .main2_wrap .main2_2 .title .btn a {
+				font-size: 16px;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+				margin: 6px 6px 0 0;
+				position: relative;
+				z-index: 2;
+			}
+			.main2 .main2_wrap .main2_2 .title .btn a:hover {
+				background: #727272;
+			}
+			.main2 .main2_wrap .main2_3 {
+				margin-bottom: 100px;
+				position: relative;
+			}
+			.main2 .main2_wrap .main2_3 > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.main2 .main2_wrap .main2_3 > img {
+				width: 100%;
+			}
+			.main2 .main2_wrap .main2_3 .title {
+				margin-top: 48px;
+				color: #111;
+			}
+			.main2 .main2_wrap .main2_3 .title .name {
+				font-size: 48px;
+				font-weight: 900;
+			}
+			.main2 .main2_wrap .main2_3 .title span {
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.main2 .main2_wrap .main2_3 .title .sub {
+				font-size: 16px;
+				font-weight: 400;
+				margin: 40px 0 24px 0;
+			}
+			.main2 .main2_wrap .main2_3 .title .btn a {
+				font-size: 16px;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+				margin: 6px 6px 0 0;
+				position: relative;
+				z-index: 2;
+			}
+			.main2 .main2_wrap .main2_3 .title .btn a:hover {
+				background: #727272;
+			}
+
+			.main3 {
+				padding: 0 38px 0 36px;
+				position: relative;
+			}
+			.main3 > p {
+				font-size: 24px;
+				font-weight: 500;
+				text-align: left;
+				padding: 20px 0;
+			}
+			.main3 .slider {
+				margin: 0 auto;
+				width: 100%;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			/* .main3 .swiper-container {
+				padding-bottom: 20px;
+			} */
+
+			.main3 .swiper-scrollbar {
+				background: transparent;
+			}
+			.main3 .swiper-scrollbar.swiper-scrollbar-horizontal {
+				height: 8px;
+				width: 95.8% !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main3 .swiper-container-horizontal > .swiper-scrollbar {
+				border-radius: 10px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main3 .swiper-wrapper img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+			.main3 .slider2 .swiper-slide a {
+				position: relative;
+				margin-bottom: 40px;
+			}
+			.main3 .slider2 .swiper-slide .title {
+				position: absolute;
+				bottom: 8%;
+				left: 8%;
+				text-align: left;
+				padding-top: 16px;
+				margin-bottom: 24px;
+			}
+			/* .main3 .slider2 .swiper-slide:first-child .title .name {
+				font-size: 20px;
+				font-weight: 500;
+				margin: 0 0 8px;
+				color: #111;
+			}
+			.main3 .slider2 .swiper-slide:first-child .title .sub {
+				color: white;
+				background: #111;
+			} */
+			.main3 .slider2 .swiper-slide .title .name {
+				font-size: 20px;
+				font-weight: 500;
+				margin: 0 0 8px;
+				color: white;
+			}
+			.main3 .slider2 .swiper-slide .title .sub {
+				width: 100px;
+				font-size: 16px;
+				font-weight: 500;
+				margin: 38px 0 0;
+				border-radius: 50px;
+				text-align: center;
+				padding: 7px 0px 9px;
+				background: #fff;
+			}
+			.main3 .slider2 .swiper-slide .title .sub:hover {
+				background: #707072;
+			}
+			.main3 .slider2 .swiper-button-prev,
+			.swiper-button-next {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: #e5e5e5;
+				/* opacity: 0.5; */
+				padding: 15px 5px;
+				color: black !important;
+				top: 30px;
+				left: unset;
+				right: 36px;
+			}
+			.main3 .slider2 .swiper-button-prev {
+				right: 100px;
+			}
+			.main3 .slider2 .swiper-button-prev:after,
+			.swiper-button-next:after {
+				font-size: 1.1rem !important;
+				font-weight: 600 !important;
+			}
+
+			.main4 {
+				position: relative;
+				margin-top: 80px;
+				padding: 0 38px 0 36px;
+			}
+			.main4 .main4_wrap {
+			}
+			.main4 .main4_wrap .main4_1 {
+				margin-bottom: 100px;
+			}
+			.main4 .main4_wrap .main4_1 > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.main4 .main4_wrap .main4_1 > img {
+				width: 100%;
+			}
+			.main4 .main4_wrap .main4_1 .title {
+				margin-top: 48px;
+				color: #111;
+			}
+			.main4 .main4_wrap .main4_1 .title .name {
+				font-size: 48px;
+				font-weight: 900;
+			}
+			.main4 .main4_wrap .main4_1 .title .sub {
+				font-size: 16px;
+				font-weight: 400;
+				margin: 24px 0;
+			}
+			.main4 .main4_wrap .main4_1 .title .btn a {
+				font-size: 16px;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+				margin: 6px 6px 0 0;
+				position: relative;
+				z-index: 2;
+			}
+			.main4 .main4_wrap .main4_1 .title .btn a:hover {
+				background: #727272;
+			}
+			.main4 .main4_wrap .main4_2 {
+				position: relative;
+				margin-bottom: 100px;
+			}
+			.main4 .main4_wrap .main4_2 > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.main4 .main4_wrap .main4_2 > img {
+				width: 100%;
+			}
+			.main4 .main4_wrap .main4_2 video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.main4 .main4_wrap .main4_2 .title {
+				margin-top: 48px;
+				color: #111;
+			}
+			.main4 .main4_wrap .main4_2 .title .name {
+				font-size: 48px;
+				font-weight: 900;
+			}
+			.main4 .main4_wrap .main4_2 .title .sub {
+				font-size: 16px;
+				font-weight: 400;
+				margin: 24px 0;
+			}
+			.main4 .main4_wrap .main4_2 .title .btn a {
+				font-size: 16px;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+				margin: 6px 6px 0 0;
+				position: relative;
+				z-index: 2;
+			}
+			.main4 .main4_wrap .main4_2 .title .btn a:hover {
+				background: #727272;
+			}
+			.main4 .main4_wrap .main4_3 {
+				position: relative;
+				margin-bottom: 100px;
+			}
+			.main4 .main4_wrap .main4_3 > a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.main4 .main4_wrap .main4_3 > img {
+				width: 100%;
+			}
+			.main4 .main4_wrap .main4_3 .title {
+				margin-top: 48px;
+				color: #111;
+			}
+			.main4 .main4_wrap .main4_3 .title .name {
+				font-size: 48px;
+				font-weight: 900;
+			}
+			.main4 .main4_wrap .main4_3 .title span {
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.main4 .main4_wrap .main4_3 .title .sub {
+				font-size: 16px;
+				font-weight: 400;
+				margin: 40px 0 24px 0;
+			}
+			.main4 .main4_wrap .main4_3 .title .btn a {
+				font-size: 16px;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+				margin: 6px 6px 0 0;
+				position: relative;
+				z-index: 2;
+			}
+			.main4 .main4_wrap .main4_3 .title .btn a:hover {
+				background: #727272;
+			}
+
+			.main5 {
+				padding: 0 38px 0 36px;
+				position: relative;
+			}
+			.main5 > p {
+				font-size: 24px;
+				font-weight: 500;
+				text-align: left;
+				padding: 20px 0;
+			}
+			.main5 .slider {
+				margin: 0 auto;
+				width: 100%;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			/* .main3 .swiper-container {
+				padding-bottom: 20px;
+			} */
+
+			.main5 .swiper-scrollbar {
+				background: transparent;
+			}
+			.main5 .swiper-scrollbar.swiper-scrollbar-horizontal {
+				height: 8px;
+				width: 95.8% !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main5 .swiper-container-horizontal > .swiper-scrollbar {
+				border-radius: 10px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main5 .swiper-wrapper img {
+				width: 100%;
+			}
+			.main5 .slider3 .swiper-slide a {
+			}
+			.main5 .slider3 .swiper-slide .title {
+				text-align: left;
+				padding-top: 16px;
+				margin-bottom: 24px;
+				color: #111;
+			}
+			.main5 .slider3 .swiper-slide .title .name {
+				font-size: 16px;
+				font-weight: 500;
+				margin: 4px 0;
+			}
+			.main5 .slider3 .swiper-slide .title .name span {
+				color: #99470a;
+				font-size: 16px;
+			}
+			.main5 .slider3 .swiper-slide .title .sub {
+				font-size: 16px;
+				margin: 0px 0 8px;
+				color: #707072;
+			}
+			.main5 .slider3 .swiper-slide .title .price {
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.main5 .slider3 .swiper-slide .title .price span {
+				text-decoration: line-through;
+				color: #707072;
+			}
+			.main5 .slider3 .swiper-button-prev,
+			.swiper-button-next {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: #e5e5e5;
+				/* opacity: 0.5; */
+				padding: 15px 5px;
+				color: black !important;
+				top: 30px;
+				left: unset;
+				right: 36px;
+			}
+			.main5 .slider3 .swiper-button-prev {
+				right: 100px;
+			}
+			.main5 .slider3 .swiper-button-prev:after,
+			.swiper-button-next:after {
+				font-size: 1.1rem !important;
+				font-weight: 600 !important;
+			}
+
+			.main6 {
+				padding: 0 38px 0 36px;
+				position: relative;
+				margin-top: 50px;
+			}
+			.main6 > p {
+				font-size: 24px;
+				font-weight: 500;
+				text-align: left;
+				padding: 20px 0;
+			}
+			.main6 .slider {
+				margin: 0 auto;
+				width: 100%;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			.main6 .swiper-wrapper img {
+				width: 100%;
+			}
+			.main6 .slider6 .swiper-slide a {
+			}
+			.main6 .slider6 .swiper-slide .title {
+				text-align: left;
+				padding-top: 16px;
+				margin-bottom: 24px;
+				color: #111;
+			}
+			.main6 .slider6 .swiper-slide .title .name {
+				font-size: 16px;
+				font-weight: 500;
+				margin: 4px 0;
+			}
+			.main6 .slider6 .swiper-button-prev,
+			.swiper-button-next {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: #e5e5e5;
+				/* opacity: 0.5; */
+				padding: 15px 5px;
+				color: black !important;
+				top: 30px;
+				left: unset;
+				right: 36px;
+			}
+			.main6 .swiper-pagination-fraction {
+				top: 25%;
+				left: 57%;
+				bottom: unset;
+				width: unset;
+				padding: 5px 10px 7px;
+				font-size: 16px;
+				color: white;
+				background: rgba(0, 0, 0, 0.25);
+				border-radius: 50px;
+				z-index: 5;
+			}
+			.main6 .slider6 .swiper-button-prev {
+				left: 7%;
+				top: 50%;
+			}
+			.main6 .slider6 .swiper-button-next {
+				right: 7%;
+				top: 50%;
+			}
+			.main6 .slider6 .swiper-button-prev:after,
+			.swiper-button-next:after {
+				font-size: 1.1rem !important;
+				font-weight: 600 !important;
+			}
+
+			.main6mb {
+				padding: 0 38px 0 36px;
+				position: relative;
+				display: none;
+			}
+			.main6mb > p {
+				font-size: 24px;
+				font-weight: 500;
+				text-align: left;
+				padding: 20px 0;
+			}
+			.main6mb .slider {
+				margin: 0 auto;
+				width: 100%;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			/* .main3 .swiper-container {
+				padding-bottom: 20px;
+			} */
+
+			.main6mb .swiper-scrollbar {
+				background: transparent;
+			}
+			.main6mb .swiper-scrollbar.swiper-scrollbar-horizontal {
+				height: 8px;
+				width: 95.8% !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main6mb .swiper-container-horizontal > .swiper-scrollbar {
+				border-radius: 10px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main6mb .swiper-wrapper img {
+				width: 100%;
+			}
+			.main6mb .slider7.swiper-slide a {
+			}
+			.main6mb .slider7 .swiper-slide .title {
+				text-align: left;
+				padding-top: 16px;
+				margin-bottom: 24px;
+				color: #111;
+			}
+			.main6mb .slider7 .swiper-slide .title .name {
+				font-size: 16px;
+				font-weight: 500;
+				margin: 4px 0;
+			}
+			.main6mb .slider7 .swiper-slide .title .name span {
+				color: #99470a;
+				font-size: 16px;
+			}
+			.main6mb .slider7 .swiper-slide .title .sub {
+				font-size: 16px;
+				margin: 0px 0 8px;
+				color: #707072;
+			}
+			.main6mb .slider7 .swiper-slide .title .price {
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.main6mb .slider7 .swiper-slide .title .price span {
+				text-decoration: line-through;
+				color: #707072;
+			}
+			.main6mb .slider7 .swiper-button-prev,
+			.swiper-button-next {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: #e5e5e5;
+				/* opacity: 0.5; */
+				padding: 15px 5px;
+				color: black !important;
+				top: 30px;
+				left: unset;
+				right: 36px;
+			}
+			.main6mb .slider7 .swiper-button-prev {
+				right: 100px;
+			}
+			.main6mb .slider7 .swiper-button-prev:after,
+			.swiper-button-next:after {
+				font-size: 1.1rem !important;
+				font-weight: 600 !important;
+			}
+
+			.main7 {
+				padding: 0 38px 0 36px;
+				position: relative;
+			}
+			.main7 > p {
+				font-size: 24px;
+				font-weight: 500;
+				text-align: left;
+				padding: 20px 0;
+			}
+			.main7 .slider {
+				margin: 0 auto;
+				width: 100%;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			/* .main3 .swiper-container {
+				padding-bottom: 20px;
+			} */
+			.main7 .swiper-wrapper {
+				margin-bottom: 24px;
+			}
+			.main7 .swiper-scrollbar {
+				background: transparent;
+			}
+			.main7 .swiper-scrollbar.swiper-scrollbar-horizontal {
+				height: 8px;
+				width: 95.8% !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main7 .swiper-container-horizontal > .swiper-scrollbar {
+				border-radius: 10px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main7 .swiper-wrapper img {
+				width: 100%;
+			}
+			.main7 .slider4 .swiper-slide {
+				position: relative;
+			}
+			.main7 .slider4 .swiper-slide > a {
+				/* position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%; */
+			}
+			.main7 .slider4 .swiper-slide .title {
+				text-align: left;
+				padding-top: 16px;
+				color: #111;
+			}
+			.main7 .slider4 .swiper-slide .title .name {
+				font-size: 20px;
+				font-weight: 500;
+				margin: 4px 0;
+			}
+
+			.main7 .slider4 .swiper-slide .title .sub {
+				font-size: 16px;
+				margin: 20px 0 38px;
+			}
+			.main7 .slider4 .swiper-slide .title .btn {
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.main7 .slider4 .swiper-slide .title .btn span {
+				font-size: 16px;
+				font-weight: 500;
+				border-bottom: 1px solid #111;
+			}
+			.main7 .slider4 .swiper-slide .title .btn span:hover {
+				color: #8f8f8f;
+			}
+			.main7 .slider4 .swiper-button-prev,
+			.swiper-button-next {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: #e5e5e5;
+				/* opacity: 0.5; */
+				padding: 15px 5px;
+				color: black !important;
+				top: 30px;
+				left: unset;
+				right: 36px;
+			}
+			.main7 .slider4 .swiper-button-prev {
+				right: 100px;
+			}
+			.main7 .slider4 .swiper-button-prev:after,
+			.swiper-button-next:after {
+				font-size: 1.1rem !important;
+				font-weight: 600 !important;
+			}
+
+			.main7mb {
+				display: none;
+				padding: 0 24px 0;
+			}
+			.main7mb .main7mb_wrap {
+				text-align: left;
+			}
+			.main7mb .main7mb_wrap > p {
+				font-size: 24px;
+				font-weight: 500;
+			}
+			.main7mb .main7mb_wrap ul {
+				border-top: 1px solid #e5e5e5;
+				padding: 20px 0 0;
+				margin-top: 20px;
+			}
+			.main7mb .main7mb_wrap ul li {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			.main7mb .main7mb_wrap ul li a {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.main7mb .main7mb_wrap ul li a .title {
+				width: 50%;
+			}
+			.main7mb .main7mb_wrap ul li a .title .name {
+				font-size: 14px;
+				color: #707072;
+				margin-bottom: 8px;
+			}
+			.main7mb .main7mb_wrap ul li a .title .sub {
+				font-size: 16px;
+				color: #111;
+			}
+			.main7mb .main7mb_wrap ul li a .img {
+				width: 110px;
+				height: 110px;
+				border: 1px solid transparent;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			.main7mb .main7mb_wrap ul li a .img img {
+				width: 100%;
+			}
+
+			.main8 {
+				padding: 0 38px 0 36px;
+				position: relative;
+				margin-top: 80px;
+			}
+			.main8 > p {
+				font-size: 24px;
+				text-align: left;
+				font-weight: 500;
+				padding: 30px 0;
+			}
+			.main8 .content {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 10px;
+			}
+			.main8 .content li {
+			}
+			.main8 .content li > a {
+				display: unset;
+			}
+			.main8 .content li > a .imgbox {
+				display: inline-block;
+				height: 540px;
+			}
+			.main8 .content li img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.main8 .content li .text {
+				text-align: left;
+			}
+			.main8 .content li .text .name {
+				font-size: 24px;
+				font-weight: 500;
+				padding: 45px 0 25px;
+			}
+			.main8 .content li .text .sub {
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 30px;
+			}
+			.main8 .content li .text .btn {
+				margin: 30px 0;
+			}
+			.main8 .content li .text .btn span {
+				font-size: 16px;
+				color: #fff;
+				background: #111;
+				padding: 9px 22px 9px;
+				border-radius: 50px;
+				font-weight: 500;
+			}
+			.main8 .content li .text .btn span:hover {
+				background: #727272;
+			}
+
+			.main8mb {
+				padding: 0 24px 0;
+				position: relative;
+				display: none;
+			}
+			.main8mb > p {
+				font-size: 24px;
+				font-weight: 500;
+				text-align: left;
+				padding: 20px 0;
+			}
+			.main8mb .slider {
+				margin: 0 auto;
+				width: 100%;
+				overflow: hidden;
+				padding-bottom: 20px;
+			}
+			/* .main3 .swiper-container {
+				padding-bottom: 20px;
+			} */
+			.main8mb .swiper-wrapper {
+				margin-bottom: 24px;
+			}
+			.main8mb .swiper-scrollbar {
+				background: transparent;
+			}
+			.main8mb .swiper-scrollbar.swiper-scrollbar-horizontal {
+				height: 8px;
+				width: 95.8% !important;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main8mb .swiper-container-horizontal > .swiper-scrollbar {
+				border-radius: 10px;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.main8mb .swiper-wrapper img {
+				width: 100%;
+				min-height: 300px;
+			}
+			.main8mb .slider5 .swiper-slide {
+				position: relative;
+			}
+			.main8mb .slider5 .swiper-slide > a {
+				/* position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%; */
+			}
+			.main8mb .slider5 .swiper-slide .title {
+				text-align: left;
+				padding-top: 16px;
+				color: #111;
+			}
+			.main8mb .slider5 .swiper-slide .title .name {
+				font-size: 20px;
+				font-weight: 500;
+				margin: 4px 0;
+			}
+
+			.main8mb .slider5 .swiper-slide .title .sub {
+				font-size: 16px;
+				margin: 20px 0 38px;
+			}
+			.main8mb .slider5 .swiper-slide .title .btn {
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.main8mb .slider5 .swiper-slide .title .btn span {
+				font-size: 16px;
+				font-weight: 500;
+				background: #111;
+				color: white;
+				padding: 10px 20px 12px;
+				border-radius: 50px;
+			}
+			.main8mb .slider5 .swiper-slide .title .btn span:hover {
+				background: #727272;
+			}
+			.main8mb .slider5 .swiper-button-prev,
+			.swiper-button-next {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				background-color: #e5e5e5;
+				/* opacity: 0.5; */
+				padding: 15px 5px;
+				color: black !important;
+				top: 30px;
+				left: unset;
+				right: 36px;
+			}
+			.main8mb .slider5 .swiper-button-prev {
+				right: 100px;
+			}
+			.main8mb .slider5 .swiper-button-prev:after,
+			.swiper-button-next:after {
+				font-size: 1.1rem !important;
+				font-weight: 600 !important;
+			}
+
+			.main9 {
+				margin: 80px 0 60px;
+			}
+			.main9 .main9_wrap {
+				max-width: 920px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+			.main9 .main9_wrap .grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				text-align: left;
+			}
+			.main9 .main9_wrap .grid > li {
+				width: 100%;
+			}
+			.main9 .main9_wrap .grid > li ul {
+			}
+			.main9 .main9_wrap .grid > li ul p {
+				font-size: 16px;
+				cursor: default;
+				padding-bottom: 20px;
+			}
+			.main9 .main9_wrap .grid > li ul li {
+				width: 100%;
+				padding: 7px 0;
+			}
+			.main9 .main9_wrap .grid > li ul li a {
+				font-size: 16px;
+				color: #707072;
+				font-weight: 500;
+			}
+			.main9 .main9_wrap .grid > li ul li a:hover {
+				color: #111;
+			}
+			.main9 .main9_wrap .grid_hide {
+				max-height: 0;
+				overflow: hidden;
+			}
+			.main9mb {
+				display: none;
+				padding: 0 24px 0;
+				text-align: left;
+				margin-bottom: 50px;
+			}
+			.main9mb .main9mb_wrap {
+			}
+			.main9mb .main9mb_wrap > li {
+			}
+			.main9mb .main9mb_wrap > li p {
+				font-size: 16px;
+				margin: 17px 0;
+				font-weight: 500;
+				cursor: pointer;
+			}
+			.main9mb .main9mb_wrap > li .h_menu {
+				max-height: 0px;
+				overflow: hidden;
+			}
+			.main9mb .main9mb_wrap > .h_btn.view .h_menu {
+				max-height: 500px;
+			}
+			.main9mb .main9mb_wrap > li ul li {
+				width: 100%;
+				margin: 3px 0 0 20px;
+			}
+			.main9mb .main9mb_wrap > li ul li a {
+				color: #707072;
+				font-size: 16px;
+				font-weight: 500;
+				padding: 5px 0;
+			}
+			.main9mb .main9mb_wrap > li ul li a:hover {
+				color: #111;
+			}
+			footer {
+				background: #111;
+				width: 100%;
+				padding: 40px 0;
+			}
+			footer a {
+				color: white;
+				font-weight: 500;
+			}
+			footer .f_wrap {
+				width: 100%;
+				margin: 0 auto;
+				max-width: 1440px;
+				padding: 0 20px;
+			}
+			footer .f_wrap .f1 {
+				display: grid;
+				grid-template-columns: 60% 20%;
+				gap: 20%;
+			}
+			footer .f_wrap .f1 .text {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				text-align: left;
+			}
+			footer .f_wrap .f1 .text .menu ul {
+			}
+			footer .f_wrap .f1 .text .menu ul li {
+				width: 100%;
+				padding: 0px 0 14px;
+			}
+			footer .f_wrap .f1 .text .menu ul li a {
+			}
+
+			footer .f_wrap .f1 .text .ha ul li {
+				width: 100%;
+				padding: 0px 0 8px;
+			}
+			footer .f_wrap .f1 .text .ha > p {
+				color: white;
+				font-size: 14px;
+				padding: 0 0 14px;
+				cursor: pointer;
+			}
+			footer .f_wrap .f1 .text .ha ul li a {
+				color: #7e7e7e;
+				font-size: 12px;
+			}
+			footer .f_wrap .f1 .text .ha ul li a:hover {
+				color: white;
+			}
+			footer .f_wrap .f1 .logo {
+				text-align: right;
+			}
+			footer .f_wrap .f1 .logo a {
+				width: 35px;
+				height: 35px;
+				background: #7e7e7e;
+				border-radius: 50px;
+				padding: 8px 0;
+				margin-left: 10px;
+				text-align: center;
+			}
+			footer .f_wrap .f1 .logo a:hover {
+				background: white;
+			}
+			footer .f_wrap .f1 .logo a i {
+				color: #111;
+				font-size: 18px;
+				text-align: center;
+			}
+			footer .f_wrap .f2 {
+				margin-top: 40px;
+			}
+			footer .f_wrap .f2 a {
+				color: white;
+			}
+			footer .f_wrap .f2 div {
+				color: white;
+			}
+			footer .f_wrap .f2 .f2_1 {
+				display: grid;
+				grid-template-columns: 30% 45%;
+				gap: 25%;
+				border-bottom: 1px solid #7e7e7e;
+				padding-bottom: 14px;
+			}
+			footer .f_wrap .f2 .f2_1 .local {
+				text-align: left;
+			}
+			footer .f_wrap .f2 .f2_1 .local a {
+				font-size: 12px;
+				line-height: 14px;
+			}
+			footer .f_wrap .f2 .f2_1 .local a i {
+				font-size: 14px;
+				padding: 0 10px 0 10px;
+			}
+			footer .f_wrap .f2 .f2_1 .local p {
+				font-size: 12px;
+				display: inline-block;
+				color: #7e7e7e;
+				margin-left: 20px;
+			}
+			footer .f_wrap .f2 .f2_1 .info {
+				text-align: right;
+			}
+			footer .f_wrap .f2 .f2_1 .info ul {
+			}
+			footer .f_wrap .f2 .f2_1 .info ul li {
+				margin-right: 25px;
+			}
+			footer .f_wrap .f2 .f2_1 .info ul li:last-child {
+				margin-right: 0;
+			}
+			footer .f_wrap .f2 .f2_1 .info ul li a {
+				font-size: 12px;
+				color: #7e7e7e;
+			}
+			footer .f_wrap .f2 .f2_1 .info ul li a:hover {
+				color: white;
+			}
+			footer .f_wrap .f2 .f2_1 .info ul li:nth-child(2) a {
+				color: white;
+			}
+			footer .f_wrap .f2 .f2_2 {
+				display: grid;
+				grid-template-columns: 45% 48%;
+				gap: 7%;
+				text-align: left;
+				padding-top: 14px;
+			}
+			footer .f_wrap .f2 .f2_2 span {
+				color: #ccc;
+				cursor: pointer;
+				text-decoration: underline;
+				font-weight: 500;
+				font-size: 11px;
+			}
+			footer .f_wrap .f2 .f2_2 span:hover {
+				color: white;
+			}
+			footer .f_wrap .f2 .f2_2 div {
+				font-size: 11px;
+				color: #7e7e7e;
+				font-weight: 500;
+			}
+			.br6 {
+				display: none;
+			}
+			.swiper-button-prev,
+			.swiper-button-next {
+				z-index: 5;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1360px) {
+				.hd2 .hd2_wrap .menubox .menu .menu_warp li:nth-child(7) {
+					display: none;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1170px) {
+				.hd2 .hd2_wrap .menubox .menu .menu_warp {
+					width: calc(100% - 450px);
+					left: 40%;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 960px) {
+				.hd1 {
+					display: none;
+				}
+				.hd2 {
+					background: white;
+				}
+				.hd2 .hd2_wrap {
+					padding: 0 24px;
+				}
+				.hd2 .hd2_wrap .menubox .menu {
+					display: none;
+				}
+				.hd2 .hd2_wrap .search .search_wrap input {
+					display: none;
+				}
+				.hd2 .hd2_wrap .search .search_wrap button {
+					border: none;
+					background-color: transparent;
+					padding: 6px;
+					cursor: pointer;
+					border-radius: 100px;
+					position: absolute;
+					top: -17px;
+					left: -40px;
+				}
+				.hd2 .hd2_wrap .btn .bmark {
+					display: none;
+				}
+				.hd2 .hd2_wrap .btn .basket {
+					margin: 0 8px;
+				}
+				.hd2 .hd2_wrap .btn .login {
+					display: block;
+				}
+				.hd2 .hd2_wrap .btn .mmenu {
+					display: block;
+				}
+				.search2 .search2_wrap {
+					padding: 10px 24px;
+				}
+				.search2 .search2_wrap .logo {
+					display: none;
+				}
+				.search2 .search2_wrap .search2Box {
+					margin-right: 40px;
+					max-width: unset;
+				}
+				.search2 .search2Text .search2Text_wrap {
+					margin: unset;
+					padding: 0 24px;
+				}
+
+				.mpd {
+					padding: 0 24px 0 24px !important;
+				}
+				.pcimg {
+					display: none;
+				}
+				.mbimg {
+					display: block;
+				}
+
+				.main1 .main1_1 .main1_1_wrap .title {
+					margin-top: 18px;
+					text-align: left;
+				}
+				.main2 .main2_wrap .title {
+					margin-top: 18px !important;
+					text-align: left;
+				}
+
+				.main4 .main4_wrap .title {
+					margin-top: 18px !important;
+					text-align: left;
+				}
+				.swiper-scrollbar {
+					display: none;
+				}
+				.swiper-button-prev,
+				.swiper-button-next {
+					display: none;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 600px) {
+				.br6 {
+					display: block;
+				}
+				.br10 {
+					display: none;
+				}
+				.main1 .main1_1 {
+					margin-bottom: 50px;
+				}
+				.title .name.n1 {
+					line-height: 54px;
+				}
+				.main1,
+				.main2_1,
+				.main2_2,
+				.main2_3,
+				.main4_1,
+				.main4_2,
+				.main4_3 {
+					margin-bottom: 50px !important;
+				}
+				.main3 > p,
+				.main5 > p,
+				.main7 > p,
+				.main8 > p {
+					padding: 0 0 20px;
+				}
+				.main4,
+				.main8 {
+					margin-top: 40px;
+				}
+				.main7 {
+					display: none;
+				}
+				.main7mb {
+					display: block;
+				}
+				.main6 {
+					display: none;
+				}
+				.main6mb {
+					display: block;
+				}
+				.main8 {
+					display: none;
+				}
+				.main8mb {
+					display: block;
+				}
+				.main9 {
+					display: none;
+				}
+				.main9mb {
+					display: block;
+				}
+
+				footer .f_wrap {
+					width: 100%;
+					margin: 0 auto;
+					max-width: 1440px;
+					padding: 0 5px;
+				}
+				footer .f_wrap .f1 {
+					display: unset;
+				}
+				footer .f_wrap .f1 .text {
+					display: block;
+					width: 100%;
+				}
+				footer .f_wrap .f1 .text .menu {
+					padding: 0 15px;
+					width: 100%;
+					border-bottom: 1px solid #323232;
+				}
+				footer .f_wrap .f1 .text .ha {
+					padding: 10px 15px 3px;
+					width: 100%;
+					border-bottom: 1px solid #323232;
+				}
+				footer .f_wrap .f1 .text .ha ul {
+					display: none;
+				}
+				footer .f_wrap .f1 .text .ha.view > ul {
+					display: block;
+				}
+				footer .f_wrap .f1 .logo {
+					text-align: left;
+					padding: 15px 0;
+				}
+				footer .f_wrap .f2 .f2_1,
+				.f2_2 {
+					padding: 0 15px;
+				}
+				footer .f_wrap .f2 .f2_1 {
+					display: block;
+					border-bottom: 1px solid #7e7e7e;
+					padding-bottom: 14px;
+				}
+				footer .f_wrap .f2 .f2_1 .local a {
+					font-size: 12px;
+					line-height: 14px;
+					margin-bottom: 15px;
+				}
+				footer .f_wrap .f2 .f2_1 .local a i {
+					font-size: 14px;
+					padding: 0 10px 0 5px;
+				}
+				footer .f_wrap .f2 .f2_1 .local p {
+					font-size: 12px;
+					display: block;
+					color: #7e7e7e;
+					margin-left: unset;
+				}
+				footer .f_wrap .f2 .f2_1 .info {
+					text-align: left;
+					margin-top: 20px;
+				}
+				footer .f_wrap .f2 .f2_1 .info ul li {
+					margin: 10px 0;
+					width: 100%;
+				}
+				footer .f_wrap .f2 .f2_2 {
+					width: 100%;
+					display: block;
+					text-align: left;
+					padding-top: 14px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 430px) {
+				.mpd {
+					padding: 0 12px 0 12px !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="hd1">
+				<div class="hd1_wrap">
+					<ul class="hd1_logobox">
+						<li class="logo1">
+							<a href="#">
+								<svg height="24px" width="24px" fill="#111" viewBox="0 0 26 32">
+									<path
+										d="M14.4 5.52v-.08q0-.56.36-1t.92-.44 1 .36.48.96-.36 1-.96.4l-.24.08.08.12-.08.44-.16 1.28q.08.08.08.16l-.16.8q-.08.16-.16.24l-.08.32q-.16.64-.28 1.04t-.2.64V12q-.08.4-.12.64t-.28.8q-.16.32 0 1.04l.08.08q0 .24.2.56t.2.56q.08 1.6-.24 2.72l.16.48q.96.48.56 1.04l.4.16q.96.48 1.36.84t.8.76q.32.08.48.24l.24.08q1.68 1.12 3.36 2.72l.32.24v.08l-.08.16.24.16h.08q.24.16.32.16h.08q.08 0 .16-.08l.16-.08q.16-.16.32-.24h.32q.08 0 0 .08l-.32.16-.4.48h.56l.56.08q.24-.08.4-.16l.4-.24q.24-.08.48.16h.08q.08.08-.08.24l-.96.88q-.4.32-.72.4l-1.04.72q-.08.08-.16 0l-.24-.32-.16-.32-.2-.28-.24-.32-.2-.24-.16-.2-.32-.24q-.16 0-.32-.08l-1.04-.8q-.24 0-.56-.24-1.2-1.04-1.6-1.28l-.48-.32-.96-.16q-.48-.08-1.28-.48l-.64-.32q-.64-.32-.88-.32l-.32-.16q-.32-.08-.48-.16l-.16-.16q-.16 0-.32.08l-1.6.8-2 .88q-.8.64-1.52 1.04l-.88.4-1.36.96q-.16.16-.32 0l-.16.16q-.24.08-.32.08l-.32.16v.16h-.16l-.16.24q-.16.32-.32.36t-.2.12-.08.12l-.16.16-.24.16-.36-.04-.48.08-.32.08q-.4.08-.64-.12t-.4-.6q-.16-.24.16-.4l.08-.08q.08-.08.24-.08h.48L1.6 26l.32-.08q0-.16.08-.24.08-.08.24-.08v-.08q-.08-.16-.08-.32-.08-.16-.04-.24t.08-.08h.04l.08.24q.08.4.24.24l.08-.16q.08-.16.24-.16l.16.16.16-.16-.08-.08q0-.08.08-.08l.32-.32q.4-.48.96-.88 1.12-.88 2.4-1.36.4-.4.88-.4.32-.56.96-1.2.56-.4.8-.56.16-.32.4-.32H10l.16-.16q.16-.08.24-.16v-.4q0-.4.08-.64t.4-.24l.32-.32q-.16-.32-.16-.72h-.08q-.16-.24-.16-.48-.24-.4-.32-.64h-.24q-.08.24-.4.32l-.08.16q-.32.56-.56.84t-.88.68q-.4.4-.56.88-.08.24 0 .48l-.08.16h.08q0 .16.08.16h.08q.16.08.16.2t-.24.08-.36-.16-.2-.12l-.24.24q-.16.24-.32.2t-.08-.12l.08-.08q.08-.16 0-.16l-.64.16q-.08.08-.2 0t.04-.16l.4-.16q0-.08-.08-.08-.32.16-.64.08l-.4-.08-.08-.08q0-.08.08-.08.32.08.8-.08l.56-.24.64-.72.08-.16q.32-.64.68-1.16t.76-.84l.08-.32q.16-.32.32-.56t.4-.64l.24-.32q.32-.48.72-.48l.24-.24q.08-.08.08-.24l.16-.16-.08-.08q-.48-.4-.48-.72-.08-.56.36-.96t.88-.36.68.28l.16.16q.08 0 .08.08l.32.16v.24q.16.16.16.24.16-.24.48-.56l.4-1.28q0-.32.16-.64l.16-.24v-.16l.24-.96h.16l.24-.96q.08-.24 0-.56l-.32-.8z"
+									></path>
+								</svg>
+							</a>
+						</li>
+						<li class="logo2">
+							<a href="#">
+								<svg height="24px" width="24px" fill="#111" viewBox="0 0 39 33">
+									<path
+										d="M10.94 25.626l-4.236-5.501L.201 22.28l3.734-5.756L.11 10.777l6.59 2.031 4.026-5.474.14 6.785 6.64 2.175-6.594 2.446.028 6.886zm.824 7.239l13.952-16.393L11.806.107h11.697l14.871 16.389-14.8 16.369h-11.81z"
+									></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+					<ul class="hd1_t">
+						<li><a href="#">매장 찾기</a></li>
+						<span></span>
+						<li>
+							<a href="#">고객센터</a>
+							<div class="helpmenu">
+								<div class="hm_wrap">
+									<span><a href="#">고객센터</a></span>
+									<ul>
+										<li><a href="#">주문</a></li>
+										<li><a href="#">로그인 안내</a></li>
+										<li><a href="#">결제 방법</a></li>
+										<li><a href="#">배송</a></li>
+										<li><a href="#">반품</a></li>
+										<li><a href="#">사이즈 가이드</a></li>
+										<li><a href="#">문의하기</a></li>
+										<li><a href="#">개인정보처리방침</a></li>
+										<li><a href="#">이용약관</a></li>
+										<li><a href="#">이벤트</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<span></span>
+						<li><a href="#">가입하기</a></li>
+						<span></span>
+						<li><a href="#">로그인</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="search2" id="search2">
+				<div class="search2_wrap">
+					<div class="logo">
+						<a href="#">
+							<svg
+								aria-hidden="true"
+								class="pre-logo-svg"
+								focusable="false"
+								viewBox="0 0 24 24"
+								role="img"
+								width="24px"
+								height="24px"
+								fill="none"
+							>
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</a>
+					</div>
+					<div class="search2Box">
+						<input type="text" placeholder="검색" autocomplete="off" aria-expanded="false" id="search2Input" />
+						<button>
+							<svg
+								aria-hidden="true"
+								class="pre-nav-design-icon"
+								focusable="false"
+								viewBox="0 0 24 24"
+								role="img"
+								width="24px"
+								height="24px"
+								fill="none"
+							>
+								<path
+									stroke="currentColor"
+									stroke-width="1.5"
+									d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853"
+								></path>
+							</svg>
+						</button>
+					</div>
+					<button class="cancel">취소</button>
+				</div>
+				<div class="search2Text">
+					<ul class="search2Text_wrap">
+						<li>인기 검색어</li>
+						<li><a href="#">Air Force 1</a></li>
+						<li><a href="#">Jordan</a></li>
+						<li><a href="#">Air Max</a></li>
+						<li><a href="#">Blazer</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="search2bg"></div>
+			<div class="hd2_p">
+				<div class="hd2" id="m1">
+					<div class="hd2_wrap">
+						<div class="logo">
+							<a href="#">
+								<svg
+									aria-hidden="true"
+									class="pre-logo-svg"
+									focusable="false"
+									viewBox="0 0 24 24"
+									role="img"
+									width="24px"
+									height="24px"
+									fill="none"
+								>
+									<path
+										fill="currentColor"
+										fill-rule="evenodd"
+										d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+										clip-rule="evenodd"
+									></path>
+								</svg>
+							</a>
+						</div>
+						<div class="menubox">
+							<div class="menu">
+								<ul class="menu_warp" onmouseover="mover()" onmouseout="mout()" onscroll="mscorll()">
+									<li>
+										<a href="#">New Releases</a>
+										<div class="sbm_bg"></div>
+										<div class="submenu1 sbm">
+											<ul class="sbm_wrap">
+												<li>
+													<a href="#">New & Featured</a>
+													<ul>
+														<li><a href="#">신제품 전체보기</a></li>
+														<li><a href="#">SNKRS</a></li>
+														<li><a href="#">나이키 스타일 크루:V2K</a></li>
+														<li><a href="#">Best Sneakers Collection</a></li>
+														<li><a href="#">ACG 신제품</a></li>
+														<li><a href="#">나이키 아우터웨어</a></li>
+														<li><a href="#">윈터 컬렉션</a></li>
+														<li><a href="#">윈터 아웃도어 &트레일</a></li>
+														<li><a href="#">Y2K 컬렉션</a></li>
+														<li><a href="#">Jordan 신제품</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Shop Icons</a>
+													<ul>
+														<li><a href="#">에어 포스 1</a></li>
+														<li><a href="#">덩크</a></li>
+														<li><a href="#">어에 조던 1</a></li>
+														<li><a href="#">에어맥스</a></li>
+														<li><a href="#">줌 보메로 5</a></li>
+														<li><a href="#">코르테즈</a></li>
+														<li><a href="#">테크 헤라</a></li>
+														<li><a href="#">페가수스</a></li>
+														<li><a href="#">인피니티 런</a></li>
+														<li><a href="#">메트콘</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">남성 신제품</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">여성 신제품</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">키즈 신제품</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#">Men</a>
+										<div class="sbm_bg"></div>
+										<div class="submenu2 sbm">
+											<ul class="sbm_wrap">
+												<li>
+													<a href="#">New & Featured</a>
+													<ul>
+														<li><a href="#">신제품</a></li>
+														<li><a href="#">베스트셀러</a></li>
+														<li><a href="#">SNKRS</a></li>
+														<li><a href="#">ACG 신제품</a></li>
+														<li><a href="#">윈터 컬렉션</a></li>
+														<li><a href="#">댄스 컬렉션</a></li>
+														<li><a href="#">Y2K 컬렉션</a></li>
+														<li><a href="#">클래식</a></li>
+														<li><a href="#">트레이닝 & 짐</a></li>
+														<li><a href="#">나이키 와플</a></li>
+														<li><a href="#">Jordan 신제품</a></li>
+														<li><a href="#">Sale: Up to 40% OFF</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">신발</a>
+													<ul>
+														<li><a href="#">신발 전체</a></li>
+														<li><a href="#">라이프스타일</a></li>
+														<li><a href="#">러닝</a></li>
+														<li><a href="#">축구</a></li>
+														<li><a href="#">샌들 & 슬리퍼</a></li>
+														<li><a href="#">트레이닝 & 짐</a></li>
+														<li><a href="#">트레일 러닝</a></li>
+														<li><a href="#">농구</a></li>
+														<li><a href="#">조던</a></li>
+														<li><a href="#">골프</a></li>
+														<li><a href="#">테니스</a></li>
+														<li><a href="#">쇼츠</a></li>
+														<li><a href="#">10만원 이하 신발</a></li>
+														<li><a href="#">Sale: Up to 40% OFF</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">의류</a>
+													<ul>
+														<li><a href="#">의류 전체</a></li>
+														<li><a href="#">라이프스타일</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">탑 & 티셔츠</a></li>
+														<li><a href="#">탑 & 티셔츠</a></li>
+														<li><a href="#">쇼츠</a></li>
+														<li><a href="#">쇼츠</a></li>
+														<li><a href="#">쇼츠</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">용품</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Shop Collection</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">가이드</a>
+													<ul>
+														<li><a href="#">런닝화 가이드</a></li>
+														<li><a href="#">축구화 가이드</a></li>
+														<li><a href="#">농구화 가이드</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">팀 유니폼</a>
+													<ul>
+														<li><a href="#">NBA</a></li>
+														<li><a href="#">축구 클럽팀</a></li>
+														<li><a href="#">한국 국가 대표팀</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#">Women</a>
+										<div class="sbm_bg"></div>
+										<div class="submenu3 sbm">
+											<ul class="sbm_wrap">
+												<li>
+													<a href="#">New & Featured</a>
+													<ul>
+														<li><a href="#">신제품</a></li>
+														<li><a href="#">베스트셀러</a></li>
+														<li><a href="#">SNKRS</a></li>
+														<li><a href="#">ACG 신제품</a></li>
+														<li><a href="#">우먼스 윈터 컬렉션</a></li>
+														<li><a href="#">우먼스 댄스 컬렉션</a></li>
+														<li><a href="#">우먼스 Y2K 컬렉션</a></li>
+														<li><a href="#">우먼스 클래식</a></li>
+														<li><a href="#">우먼스 트레이닝 & 짐</a></li>
+														<li><a href="#">나이키 와플</a></li>
+														<li><a href="#">Jordan 신제품</a></li>
+														<li><a href="#">Sale: Up to 40% OFF</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">신발</a>
+													<ul>
+														<li><a href="#">신발 전체</a></li>
+														<li><a href="#">라이프스타일</a></li>
+														<li><a href="#">러닝</a></li>
+														<li><a href="#">축구</a></li>
+														<li><a href="#">샌들 & 슬리퍼</a></li>
+														<li><a href="#">트레이닝 & 짐</a></li>
+														<li><a href="#">트레일 러닝</a></li>
+														<li><a href="#">농구</a></li>
+														<li><a href="#">조던</a></li>
+														<li><a href="#">골프</a></li>
+														<li><a href="#">테니스</a></li>
+														<li><a href="#">10만원 이하 신발</a></li>
+														<li><a href="#">Sale: Up to 40% OFF</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">의류</a>
+													<ul>
+														<li><a href="#">의류 전체</a></li>
+														<li><a href="#">라이프스타일</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">탑 & 티셔츠</a></li>
+														<li><a href="#">탑 & 티셔츠</a></li>
+														<li><a href="#">쇼츠</a></li>
+														<li><a href="#">쇼츠</a></li>
+														<li><a href="#">쇼츠</a></li>
+														<li><a href="#">쇼츠</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">용품</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Shop Collection</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#">Kids</a>
+										<div class="sbm_bg"></div>
+										<div class="submenu4 sbm">
+											<ul class="sbm_wrap">
+												<li>
+													<a href="#">New & Featured</a>
+													<ul>
+														<li><a href="#">신제품</a></li>
+														<li><a href="#">베스트셀러</a></li>
+														<li><a href="#">SNKRS</a></li>
+														<li><a href="#">ACG 신제품</a></li>
+														<li><a href="#">윈터 컬렉션</a></li>
+														<li><a href="#">댄스 컬렉션</a></li>
+														<li><a href="#">Y2K 컬렉션</a></li>
+														<li><a href="#">클래식</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">신발</a>
+													<ul>
+														<li><a href="#">신발 전체</a></li>
+														<li><a href="#">라이프스타일</a></li>
+														<li><a href="#">러닝</a></li>
+														<li><a href="#">축구</a></li>
+														<li><a href="#">샌들 & 슬리퍼</a></li>
+														<li><a href="#">트레이닝 & 짐</a></li>
+														<li><a href="#">트레일 러닝</a></li>
+														<li><a href="#">농구</a></li>
+														<li><a href="#">조던</a></li>
+														<li><a href="#">골프</a></li>
+														<li><a href="#">테니스</a></li>
+													</ul>
+													<a href="#">사이즈별 신발</a>
+													<ul>
+														<li><a href="#">런닝화 가이드</a></li>
+														<li><a href="#">축구화 가이드</a></li>
+														<li><a href="#">농구화 가이드</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">의류</a>
+													<ul>
+														<li><a href="#">의류 전체</a></li>
+														<li><a href="#">라이프스타일</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">재킷 & 베스트</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">후디 & 크루</a></li>
+														<li><a href="#">탑 & 티셔츠</a></li>
+														<li><a href="#">탑 & 티셔츠</a></li>
+													</ul>
+													<a href="#">사이즈별 의류</a>
+													<ul>
+														<li><a href="#">NBA</a></li>
+														<li><a href="#">축구 클럽팀</a></li>
+														<li><a href="#">한국 국가 대표팀</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">용품</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+													</ul>
+													<a href="#">Shop Collection</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#">Sale</a>
+										<div class="sbm_bg"></div>
+										<div class="submenu5 sbm">
+											<ul class="sbm_wrap">
+												<li>
+													<a href="#">Sale</a>
+													<ul>
+														<li><a href="#">신제품 전체보기</a></li>
+														<li><a href="#">SNKRS</a></li>
+														<li><a href="#">나이키 스타일 크루:V2K</a></li>
+														<li><a href="#">Best Sneakers Collection</a></li>
+														<li><a href="#">ACG 신제품</a></li>
+														<li><a href="#">나이키 아우터웨어</a></li>
+														<li><a href="#">윈터 컬렉션</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Mens Sale</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">10만원 이하</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Womens Sale</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">10만원 이하</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+												<li>
+													<a href="#">Kids Sale</a>
+													<ul>
+														<li><a href="#">신발</a></li>
+														<li><a href="#">의류</a></li>
+														<li><a href="#">용품</a></li>
+														<li><a href="#">10만원 이하</a></li>
+														<li><a href="#">전체보기</a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#">SNKRS</a></li>
+									<li><a href="#">우리를 움직이게 하는 선물</a></li>
+								</ul>
+							</div>
+
+							<div class="search">
+								<div class="search_wrap">
+									<input
+										type="text"
+										placeholder="검색"
+										autocomplete="off"
+										aria-expanded="false"
+										class="searchBtn"
+									/>
+									<button class="searchBtn">
+										<svg
+											aria-hidden="true"
+											class="pre-nav-design-icon"
+											focusable="false"
+											viewBox="0 0 24 24"
+											role="img"
+											width="24px"
+											height="24px"
+											fill="none"
+										>
+											<path
+												stroke="currentColor"
+												stroke-width="1.5"
+												d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853"
+											></path>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<ul class="btn">
+							<li class="bmark">
+								<button>
+									<svg
+										aria-hidden="true"
+										class="pre-nav-design-icon"
+										focusable="false"
+										viewBox="0 0 24 24"
+										role="img"
+										width="24px"
+										height="24px"
+										fill="none"
+									>
+										<path
+											stroke="currentColor"
+											stroke-width="1.5"
+											d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"
+										></path>
+									</svg>
+								</button>
+							</li>
+							<li class="basket">
+								<button>
+									<svg
+										aria-hidden="true"
+										class="pre-nav-design-icon"
+										focusable="false"
+										viewBox="0 0 24 24"
+										role="img"
+										width="24px"
+										height="24px"
+										fill="none"
+									>
+										<path
+											stroke="currentColor"
+											stroke-width="1.5"
+											d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"
+										></path>
+									</svg>
+								</button>
+							</li>
+							<li class="login">
+								<button>
+									<svg
+										aria-hidden="true"
+										class="pre-nav-design-icon"
+										focusable="false"
+										viewBox="0 0 24 24"
+										role="img"
+										width="24px"
+										height="24px"
+										fill="none"
+										data-var="glyph"
+										style="display: inline-block"
+									>
+										<path
+											fill="currentColor"
+											d="M12 3a4.5 4.5 0 00-4.5 4.5H9a3 3 0 013-3V3zM7.5 7.5A4.5 4.5 0 0012 12v-1.5a3 3 0 01-3-3H7.5zM12 12a4.5 4.5 0 004.5-4.5H15a3 3 0 01-3 3V12zm4.5-4.5A4.5 4.5 0 0012 3v1.5a3 3 0 013 3h1.5zM4.5 21v-3H3v3h1.5zm0-3a3 3 0 013-3v-1.5A4.5 4.5 0 003 18h1.5zm3-3h9v-1.5h-9V15zm9 0a3 3 0 013 3H21a4.5 4.5 0 00-4.5-4.5V15zm3 3v3H21v-3h-1.5z"
+										></path>
+									</svg>
+								</button>
+							</li>
+							<li class="mmenu">
+								<button class="m_menubtn">
+									<svg
+										aria-hidden="true"
+										class="pre-nav-design-icon"
+										focusable="false"
+										viewBox="0 0 24 24"
+										role="img"
+										width="24px"
+										height="24px"
+										fill="none"
+									>
+										<path stroke="currentColor" stroke-width="1.5" d="M21 5.25H3M21 12H3m18 6.75H3"></path>
+									</svg>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hd3" id="m2"></div>
+
+			<div class="m_menu">
+				<div class="m_menu_wrap">
+					<div class="close">
+						<span></span>
+						<span></span>
+					</div>
+					<button>
+						<div class="btn_label">New Releases</div>
+						<div><i class="fa-solid fa-chevron-right"></i></div>
+					</button>
+					<button>
+						<div class="btn_label">Men</div>
+						<div><i class="fa-solid fa-chevron-right"></i></div>
+					</button>
+					<button>
+						<div class="btn_label">Women</div>
+						<div><i class="fa-solid fa-chevron-right"></i></div>
+					</button>
+					<button>
+						<div class="btn_label">Kids</div>
+						<div><i class="fa-solid fa-chevron-right"></i></div>
+					</button>
+					<button>
+						<div class="btn_label">SNKRS</div>
+						<div></div>
+					</button>
+					<button>
+						<div class="btn_label">블랙프라이데이</div>
+						<div><i class="fa-solid fa-chevron-right"></i></div>
+					</button>
+					<div class="logo">
+						<a href="#" class="logo1">
+							<span
+								><svg height="30px" width="30px" fill="#111" viewBox="0 0 26 32">
+									<path
+										d="M14.4 5.52v-.08q0-.56.36-1t.92-.44 1 .36.48.96-.36 1-.96.4l-.24.08.08.12-.08.44-.16 1.28q.08.08.08.16l-.16.8q-.08.16-.16.24l-.08.32q-.16.64-.28 1.04t-.2.64V12q-.08.4-.12.64t-.28.8q-.16.32 0 1.04l.08.08q0 .24.2.56t.2.56q.08 1.6-.24 2.72l.16.48q.96.48.56 1.04l.4.16q.96.48 1.36.84t.8.76q.32.08.48.24l.24.08q1.68 1.12 3.36 2.72l.32.24v.08l-.08.16.24.16h.08q.24.16.32.16h.08q.08 0 .16-.08l.16-.08q.16-.16.32-.24h.32q.08 0 0 .08l-.32.16-.4.48h.56l.56.08q.24-.08.4-.16l.4-.24q.24-.08.48.16h.08q.08.08-.08.24l-.96.88q-.4.32-.72.4l-1.04.72q-.08.08-.16 0l-.24-.32-.16-.32-.2-.28-.24-.32-.2-.24-.16-.2-.32-.24q-.16 0-.32-.08l-1.04-.8q-.24 0-.56-.24-1.2-1.04-1.6-1.28l-.48-.32-.96-.16q-.48-.08-1.28-.48l-.64-.32q-.64-.32-.88-.32l-.32-.16q-.32-.08-.48-.16l-.16-.16q-.16 0-.32.08l-1.6.8-2 .88q-.8.64-1.52 1.04l-.88.4-1.36.96q-.16.16-.32 0l-.16.16q-.24.08-.32.08l-.32.16v.16h-.16l-.16.24q-.16.32-.32.36t-.2.12-.08.12l-.16.16-.24.16-.36-.04-.48.08-.32.08q-.4.08-.64-.12t-.4-.6q-.16-.24.16-.4l.08-.08q.08-.08.24-.08h.48L1.6 26l.32-.08q0-.16.08-.24.08-.08.24-.08v-.08q-.08-.16-.08-.32-.08-.16-.04-.24t.08-.08h.04l.08.24q.08.4.24.24l.08-.16q.08-.16.24-.16l.16.16.16-.16-.08-.08q0-.08.08-.08l.32-.32q.4-.48.96-.88 1.12-.88 2.4-1.36.4-.4.88-.4.32-.56.96-1.2.56-.4.8-.56.16-.32.4-.32H10l.16-.16q.16-.08.24-.16v-.4q0-.4.08-.64t.4-.24l.32-.32q-.16-.32-.16-.72h-.08q-.16-.24-.16-.48-.24-.4-.32-.64h-.24q-.08.24-.4.32l-.08.16q-.32.56-.56.84t-.88.68q-.4.4-.56.88-.08.24 0 .48l-.08.16h.08q0 .16.08.16h.08q.16.08.16.2t-.24.08-.36-.16-.2-.12l-.24.24q-.16.24-.32.2t-.08-.12l.08-.08q.08-.16 0-.16l-.64.16q-.08.08-.2 0t.04-.16l.4-.16q0-.08-.08-.08-.32.16-.64.08l-.4-.08-.08-.08q0-.08.08-.08.32.08.8-.08l.56-.24.64-.72.08-.16q.32-.64.68-1.16t.76-.84l.08-.32q.16-.32.32-.56t.4-.64l.24-.32q.32-.48.72-.48l.24-.24q.08-.08.08-.24l.16-.16-.08-.08q-.48-.4-.48-.72-.08-.56.36-.96t.88-.36.68.28l.16.16q.08 0 .08.08l.32.16v.24q.16.16.16.24.16-.24.48-.56l.4-1.28q0-.32.16-.64l.16-.24v-.16l.24-.96h.16l.24-.96q.08-.24 0-.56l-.32-.8z"
+									></path>
+								</svg>
+							</span>
+							<p>Jordan</p>
+						</a>
+						<a href="#" class="logo2">
+							<span>
+								<svg height="30px" width="30px" fill="#111" viewBox="0 0 39 33">
+									<path
+										d="M10.94 25.626l-4.236-5.501L.201 22.28l3.734-5.756L.11 10.777l6.59 2.031 4.026-5.474.14 6.785 6.64 2.175-6.594 2.446.028 6.886zm.824 7.239l13.952-16.393L11.806.107h11.697l14.871 16.389-14.8 16.369h-11.81z"
+									></path>
+								</svg>
+							</span>
+							<p>Converse</p>
+						</a>
+					</div>
+					<div class="text">
+						<p>
+							나이키 멤버가 되어 최고의<br />제품, 스포츠에 대한<br />영관과 스토리를<br />만나보세요.
+							<a href="#">자세히 보기</a>
+						</p>
+						<a href="#" class="sign">가입하기</a>
+						<a href="#" class="log">로그인</a>
+					</div>
+					<ul class="box">
+						<li>
+							<a href="#">
+								<svg
+									aria-hidden="true"
+									class="pre-nav-design-icon"
+									focusable="false"
+									viewBox="0 0 24 24"
+									role="img"
+									width="24px"
+									height="24px"
+									fill="none"
+								>
+									<path
+										stroke="currentColor"
+										stroke-width="1.5"
+										d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"
+									></path>
+								</svg>
+								<p>장바구니</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg
+									aria-hidden="true"
+									class="pre-nav-design-icon"
+									focusable="false"
+									viewBox="0 0 24 24"
+									role="img"
+									width="24px"
+									height="24px"
+									fill="none"
+								>
+									<path
+										stroke="currentColor"
+										stroke-miterlimit="10"
+										stroke-width="1.5"
+										d="M14.25 3.75C13.01 3.75 12 4.76 12 6.5v7m8.25-3.75H3.75"
+									></path>
+									<path
+										stroke="currentColor"
+										stroke-miterlimit="10"
+										stroke-width="1.5"
+										d="M14.25 3.75h4.39l1.61 6v10.5H3.75V9.75l1.61-6h5.14"
+									></path>
+								</svg>
+								<p>주문</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg
+									aria-hidden="true"
+									class="pre-nav-design-icon"
+									focusable="false"
+									viewBox="0 0 24 24"
+									role="img"
+									width="24px"
+									height="24px"
+									fill="none"
+								>
+									<path
+										stroke="currentColor"
+										stroke-miterlimit="10"
+										stroke-width="1.5"
+										d="M20.25 5.25V16.5c0 1.24-1.01 2.25-2.25 2.25H6c-1.24 0-2.25-1.01-2.25-2.25V5.25"
+									></path>
+									<path
+										stroke="currentColor"
+										stroke-miterlimit="10"
+										stroke-width="1.5"
+										d="M8.25 18.5v-7.25h7.5v7.25M12 11.25v7.25M1.5 5.25h21"
+									></path>
+								</svg>
+								<p>매장 찾기</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<svg
+									aria-hidden="true"
+									class="pre-nav-design-icon"
+									focusable="false"
+									viewBox="0 0 24 24"
+									role="img"
+									width="24px"
+									height="24px"
+									fill="none"
+								>
+									<path
+										stroke="currentColor"
+										stroke-miterlimit="10"
+										stroke-width="1.5"
+										d="M12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25 2.25 6.615 2.25 12s4.365 9.75 9.75 9.75zM11.99 18v-1.5"
+									></path>
+									<path
+										stroke="currentColor"
+										stroke-miterlimit="10"
+										stroke-width="1.5"
+										d="M9 9.75a3 3 0 114.29 2.71c-.78.37-1.29 1.16-1.29 2.03V15"
+									></path>
+								</svg>
+								<p>고객센터</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="m_menubg"></div>
+		</header>
+
+		<main class="main1">
+			<div class="main1_1 mpd">
+				<div class="main1_1_wrap">
+					<a href="#"></a>
+					<img src="img/main1.webp" alt="" class="pcimg" />
+					<img src="img/main1m.webp" alt="" class="mbimg" />
+					<div class="title">
+						<div class="name n1">
+							우리를 <br class="br6" />움직이게 하는<br class="br6" />
+							선물
+						</div>
+						<div class="sub">
+							오늘의 감동이 내일의 움직임으로<br class="br6" />
+							이어지도록,<br class="br10" />
+							나와 소중한 이들에게<br class="br6" />
+							선물 그 이상을 전해보세요.
+						</div>
+						<div class="btn">
+							<a href="#">자세히 보기</a>
+							<a href="#">기프트 컬렉션 구매하기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main1_2 mpd">
+				<p>소중한 사람들을 위한 특별한 선물</p>
+				<div class="slider slider1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">
+								<img src="img/main1_slide1.webp" alt="" />
+								<div class="title">
+									<div class="name">스타일리쉬한 퍼포먼스를 위한 선물</div>
+									<div class="sub">어떤 운동에도 스타일을 더하는 온더고 컬렉션을 선물해 보세요.</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<img src="img/main1_slide2.webp" alt="" />
+								<div class="title">
+									<div class="name">스타일리쉬한 퍼포먼스를 위한 선물</div>
+									<div class="sub">어떤 운동에도 스타일을 더하는 온더고 컬렉션을 선물해 보세요.</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<img src="img/main1_slide3.webp" alt="" />
+								<div class="title">
+									<div class="name">스타일리쉬한 퍼포먼스를 위한 선물</div>
+									<div class="sub">어떤 운동에도 스타일을 더하는 온더고 컬렉션을 선물해 보세요.</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<img src="img/main1_slide4.webp" alt="" />
+								<div class="title">
+									<div class="name">스타일리쉬한 퍼포먼스를 위한 선물</div>
+									<div class="sub">어떤 운동에도 스타일을 더하는 온더고 컬렉션을 선물해 보세요.</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<!-- scrollbar -->
+					<div class="swiper-scrollbar"></div>
+
+					<!-- buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</main>
+
+		<main class="main2">
+			<div class="main2_wrap mpd">
+				<div class="main2_1">
+					<a href="#"></a>
+					<img src="img/main2_1.webp" alt="" class="pcimg" />
+					<img src="img/main2_1m.webp" alt="" class="mbimg" />
+					<div class="title">
+						<span>Nike App Victory Friday</span>
+						<div class="name n1">
+							허니제이의<br class="br6" />
+							코르테즈 스타일
+						</div>
+						<div class="sub">
+							코르테즈로 완성한 댄서 허니제이의<br class="br6" />
+							스타일링을 확인하고<br class="br10" />
+							추첨을 통해<br class="br6" />
+							50명에게 제품이 제공되는<br class="br6" />
+							앱 기프트 이벤트에 응모해 보세요.
+						</div>
+						<div class="btn">
+							<a href="#">이벤트 참여하기</a>
+							<a href="#">추천 스타일 구매하기</a>
+						</div>
+					</div>
+				</div>
+				<div class="main2_2">
+					<a href="#"></a>
+					<img src="img/main2_2.webp" alt="" class="pcimg" />
+					<img src="img/main2_2m.webp" alt="" class="mbimg" />
+					<div class="title">
+						<div class="name n1">OWN THE FLOOR</div>
+						<div class="sub">
+							스포트라이트를 위한<br class="br6" />
+							피닉스 플러스 스타일
+						</div>
+						<div class="btn">
+							<a href="#">구매하기</a>
+							<a href="#">자세히 보기 ▶</a>
+						</div>
+					</div>
+				</div>
+				<div class="main2_3">
+					<a href="#"></a>
+					<img src="img/main2_3.jpg" alt="" class="pcimg" />
+					<img src="img/main2_3m.jpg" alt="" class="mbimg" />
+					<div class="title">
+						<span>Nike Tuned Air</span>
+						<div class="name">나이키 TN</div>
+						<div class="sub">
+							1998년부터 2023년 현재까지,<br class="br6" />
+							힙합, 스트릿, 예술 등<br class="br6" />
+							문화 각계에 영향을 미치며<br />
+							25년간 전 세계에서<br class="br6" />
+							엄청난 사랑을 받아온<br class="br6" />
+							나이키 TN 을 만나 보세요.
+						</div>
+						<div class="btn">
+							<a href="#">구매하기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<main class="main3 mpd">
+			<p>Trending Now</p>
+			<div class="slider slider2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main3_slide1.webp" alt="" class="pcimg" />
+							<img src="img/main3_slide1m.webp" alt="" class="mbimg" />
+							<div class="title">
+								<div class="name">나이키 덩크</div>
+								<div class="sub">구매하기</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main3_slide2.webp" alt="" class="pcimg" />
+							<img src="img/main3_slide2m.webp" alt="" class="mbimg" />
+							<div class="title">
+								<div class="name">에어맥스</div>
+								<div class="sub">구매하기</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main3_slide3.jpg" alt="" class="pcimg" />
+							<img src="img/main3_slide3m.jpg" alt="" class="mbimg" />
+							<div class="title">
+								<div class="name">조던 매칭 셋업</div>
+								<div class="sub">구매하기</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main3_slide4.webp" alt="" class="pcimg" />
+							<img src="img/main3_slide4m.webp" alt="" class="mbimg" />
+							<div class="title">
+								<div class="name">르브론 XXI '타히티안'</div>
+								<div class="sub">구매하기</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- scrollbar -->
+				<div class="swiper-scrollbar"></div>
+
+				<!-- buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</main>
+		<main class="main4 mpd">
+			<div class="main4_wrap">
+				<div class="main4_1">
+					<a href="#"></a>
+					<img src="img/main4_1.jpg" alt="" class="pcimg" />
+					<img src="img/main4_1m.jpg" alt="" class="mbimg" />
+					<div class="title">
+						<div class="name n1">
+							나이키<br class="br6" />
+							페가수스 트레일<br class="br6" />
+							GORE-TEX
+						</div>
+						<div class="sub">
+							비 오는 거리를 달리거나 진흙이<br class="br6" />
+							많은 트레일 코스를 지나갈 때도<br class="br6" />
+							발을 쾌적한 상태로 유지해 주는<br />
+							나이키 페가수스 트레일 GORE-TEX를<br class="br6" />
+							만나 보세요.
+						</div>
+						<div class="btn">
+							<a href="#">구매하기</a>
+						</div>
+					</div>
+				</div>
+				<div class="main4_2">
+					<a href="#"></a>
+					<img src="img/main4_2.webp" alt="" class="pcimg" />
+					<video src="img/main4_2m.mp4" type="video/mp4" autoplay muted loop class="mbimg"></video>
+					<div class="title">
+						<div class="name n1">
+							에어 포스 1<br class="br6" />
+							에센셜
+						</div>
+						<div class="sub">
+							에어 포스 1처럼 편안한 착용감으로<br class="br6" />
+							클래식한 스타일을 완성해 보세요.
+						</div>
+						<div class="btn">
+							<a href="#">구매하기</a>
+						</div>
+					</div>
+				</div>
+				<div class="main4_3">
+					<a href="#"></a>
+					<img src="img/main4_3.webp" alt="" class="pcimg" />
+					<img src="img/main4_3m.webp" alt="" class="mbimg" />
+					<div class="title">
+						<span>나이키 스우시 1</span>
+						<div class="name n1">아이들의 첫걸음</div>
+						<div class="sub">
+							아이들의 첫걸음부터<br class="br6" />
+							앞으로 계속될 발검음까지<br class="br6" />
+							한결같은 편안함을 선사하는 스우시 1. <br />지금 바로 만나 보세요.
+						</div>
+						<div class="btn">
+							<a href="#">구매하기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<main class="main5 mpd">
+			<p>Featured Shoes</p>
+			<div class="slider slider3">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">에어 조던1 로우</div>
+								<div class="sub">여성 신발</div>
+								<div class="price">139,000 원</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide2.webp" alt="" />
+							<div class="title">
+								<div class="name">
+									<span>멤버 전용 제품</span><br />
+									나이키 에어 포스 1 `07
+								</div>
+								<div class="sub">남성 신발</div>
+								<div class="price">139,000 원</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide3.webp" alt="" />
+							<div class="title">
+								<div class="name">
+									<span>멤버 전용 제품</span><br />
+									나이키 프리 메트콘 5
+								</div>
+								<div class="sub">남성 운동화</div>
+								<div class="price">
+									104,200 원<br />
+									<span>139,000원</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">에어 조던1 로우</div>
+								<div class="sub">여성 신발</div>
+								<div class="price">139,000 원</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide2.webp" alt="" />
+							<div class="title">
+								<div class="name">
+									<span>멤버 전용 제품</span><br />
+									나이키 에어 포스 1 `07
+								</div>
+								<div class="sub">남성 신발</div>
+								<div class="price">139,000 원</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide3.webp" alt="" />
+							<div class="title">
+								<div class="name">
+									<span>멤버 전용 제품</span><br />
+									나이키 프리 메트콘 5
+								</div>
+								<div class="sub">남성 운동화</div>
+								<div class="price">
+									104,200 원<br />
+									<span>139,000원</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">에어 조던1 로우</div>
+								<div class="sub">여성 신발</div>
+								<div class="price">139,000 원</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide2.webp" alt="" />
+							<div class="title">
+								<div class="name">
+									<span>멤버 전용 제품</span><br />
+									나이키 에어 포스 1 `07
+								</div>
+								<div class="sub">남성 신발</div>
+								<div class="price">139,000 원</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main5_slide3.webp" alt="" />
+							<div class="title">
+								<div class="name">
+									<span>멤버 전용 제품</span><br />
+									나이키 프리 메트콘 5
+								</div>
+								<div class="sub">남성 운동화</div>
+								<div class="price">
+									104,200 원<br />
+									<span>139,000원</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- scrollbar -->
+				<div class="swiper-scrollbar"></div>
+
+				<!-- buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</main>
+		<main class="main6 mpd">
+			<p>Always Iconic</p>
+			<div class="slider slider6">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">에어 조던1 로우</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide2.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 에어 포스 1 `07</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide3.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 프리 메트콘 5</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide4.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 레볼루션 7</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">에어 조던1 로우</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide2.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 에어 포스 1 `07</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide3.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 프리 메트콘 5</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- scrollbar -->
+				<div class="swiper-pagination"></div>
+				<!-- buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</main>
+		<main class="main6mb mpd">
+			<p>Always Iconic</p>
+			<div class="slider slider7">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">에어 조던1 로우</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide2.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 에어 포스 1 `07</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide3.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 프리 메트콘 5</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide4.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 레볼루션 7</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">에어 조던1 로우</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main6_slide2.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 에어 포스 1 `07</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- scrollbar -->
+				<div class="swiper-scrollbar"></div>
+
+				<!-- buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</main>
+		<main class="main7 mpd">
+			<p>Shop by Sport</p>
+			<div class="slider slider4">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main7_slide1.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 농구</div>
+								<div class="sub">경기를 빛내줄 스타일</div>
+								<div class="btn"><span>구매하기</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main7_slide2.jpg" alt="" />
+							<div class="title">
+								<div class="name">나이키 골프</div>
+								<div class="sub">골프 필드 위 자신감을 더해주는 스타일</div>
+								<div class="btn"><span>구매하기</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main7_slide3.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 트레일 러닝</div>
+								<div class="sub">새로운 모험으로 이끌어 주는 아이템</div>
+								<div class="btn"><span>구매하기</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main7_slide4.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 테니스</div>
+								<div class="sub">강력한 서브를 돋보이게 하는 스타일</div>
+								<div class="btn"><span>구매하기</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main7_slide5.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 축구</div>
+								<div class="sub">경기 중 독보적인 존재감을 드러낼 아이템</div>
+								<div class="btn"><span>구매하기</span></div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- scrollbar -->
+				<div class="swiper-scrollbar"></div>
+
+				<!-- buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</main>
+		<main class="main7mb">
+			<div class="main7mb_wrap">
+				<p>Shop by Sport</p>
+				<ul>
+					<li>
+						<a href="#">
+							<div class="title">
+								<div class="name">나이키 농구</div>
+								<div class="sub">경기를 빛내줄 스타일</div>
+							</div>
+							<div class="img">
+								<img src="img/main7_slide1m.webp" alt="" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="title">
+								<div class="name">나이키 골프</div>
+								<div class="sub">골프 필드 위 자신감을 더해주는 스타일</div>
+							</div>
+							<div class="img">
+								<img src="img/main7_slide2m.webp" alt="" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="title">
+								<div class="name">나이키 트레일 러닝</div>
+								<div class="sub">새로운 모험으로 이끌어 주는 아이템</div>
+							</div>
+							<div class="img">
+								<img src="img/main7_slide3m.webp" alt="" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="title">
+								<div class="name">나이키 테니스</div>
+								<div class="sub">강력한 서브를 돋보이게 하는 스타일</div>
+							</div>
+							<div class="img">
+								<img src="img/main7_slide4m.webp" alt="" />
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="title">
+								<div class="name">나이키 축구</div>
+								<div class="sub">경기 중 독보적인 존재감을 드러낼 아이템</div>
+							</div>
+							<div class="img">
+								<img src="img/main7_slidem.webp" alt="" />
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<main class="main8 mpd">
+			<p>나이키 커뮤니티와 함께하기</p>
+			<ul class="content">
+				<li>
+					<a href="#">
+						<div class="imgbox">
+							<img src="img/main8_1.webp" alt="" />
+						</div>
+						<div class="text">
+							<div class="name">나이키 앱</div>
+							<div class="sub">
+								원하는 것을 누구보다 빠르게,<br />
+								새로운 영감으로 매일을 새롭게, 상상만 했던 경험을 현실로. <br />
+								여러분의 매일을 나이키 앱에서 바꿔 보세요.
+							</div>
+							<div class="btn"><span>자세히 보기</span></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="imgbox">
+							<img src="img/main8_2.webp" alt="" />
+						</div>
+						<div class="text">
+							<div class="name">나이키 트레이닝 클럽(NTC)</div>
+							<div class="sub">
+								NTC 앱으로 개인 맞춤형 트레이닝 가이드를 만나 보세요.<br />
+								운동, 마음가짐, 영양, 수면 등 몸과<br />
+								마음을 위한 전문가 팁도 함께 제공됩니다.
+							</div>
+							<div class="btn"><span>자세히 보기</span></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="imgbox">
+							<img src="img/main8_3.jpg" alt="" />
+						</div>
+						<div class="text">
+							<div class="name">나이키 런 클럽(NRC)</div>
+							<div class="sub">
+								NRC 앱과 함께 언제 어디서든 러닝을 시작해 보세요.<br />
+								전문 러닝 코치들의 오디오 가이드 런으로<br />
+								올바른 러닝 루틴을 만들 수 있습니다.
+							</div>
+							<div class="btn"><span>자세히 보기</span></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#"
+						><div class="imgbox">
+							<img src="img/main8_4.jpg" alt="" />
+						</div>
+						<div class="text">
+							<div class="name">SNKRS 앱</div>
+							<div class="sub">
+								최고의 스니커즈, 최신 발매 소식, 독점 비하인드 스토리.<br />
+								새로운 스니커즈 문화를 선도할<br />
+								SNKRS 커뮤니티로 초대 합니다.
+							</div>
+							<div class="btn"><span>자세히 보기</span></div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</main>
+		<main class="main8mb">
+			<p>나이키 커뮤니티와 함께하기</p>
+			<div class="slider slider5">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main8_1m.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 앱</div>
+								<div class="sub">
+									원하는 것을 누구보다 빠르게,<br />
+									새로운 영감으로 매일을 새롭게,<br />
+									상상만 했던 경험을 현실로. <br />
+									여러분의 매일을<br />
+									나이키 앱에서 바꿔 보세요.
+								</div>
+								<div class="btn"><span>자세히 보기</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main8_2m.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 트레이닝 클럽(NTC)</div>
+								<div class="sub">
+									NTC 앱으로 개인 맞춤형<br />
+									트레이닝 가이드를 만나 보세요.<br />
+									운동, 마음가짐, 영양, 수면 등<br />
+									몸과 마음을 위한 전문가 팁도<br />
+									함께 제공됩니다.
+								</div>
+								<div class="btn"><span>자세히 보기</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main8_3m.webp" alt="" />
+							<div class="title">
+								<div class="name">나이키 런 클럽(NRC)</div>
+								<div class="sub">
+									NRC 앱과 함께 언제 어디서든<br />
+									러닝을 시작해 보세요.<br />
+									전문 러닝 코치들의 오디오<br />
+									가이드 런으로 올바른 러닝 루틴을<br />
+									만들 수 있습니다.
+								</div>
+								<div class="btn"><span>자세히 보기</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<img src="img/main8_4m.jpg" alt="" />
+							<div class="title">
+								<div class="name">SNKRS 앱</div>
+								<div class="sub">
+									최고의 스니커즈, 최신 발매 소식,<br />
+									독점 비하인드 스토리.<br />
+									새로운 스니커즈 문화를 선도할<br />
+									SNKRS 커뮤니티로 초대 합니다.
+								</div>
+								<div class="btn"><span>자세히 보기</span></div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- scrollbar -->
+				<div class="swiper-scrollbar"></div>
+
+				<!-- buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</main>
+		<main class="main9">
+			<div class="main9_wrap hideBtn">
+				<ul class="grid">
+					<li>
+						<ul>
+							<p>Featured</p>
+							<li><a href="#">에어 포스 1</a></li>
+							<li><a href="#">조던 1</a></li>
+							<li><a href="#">에어맥스 97</a></li>
+							<li><a href="#">에어맥스 90</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<p>신발</p>
+							<li><a href="#">전체 보기</a></li>
+							<li><a href="#">조던 신발</a></li>
+							<li><a href="#">러닝 신발</a></li>
+							<li><a href="#">농구 신발</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<p>의류</p>
+							<li><a href="#">전체 보기</a></li>
+							<li><a href="#">탑 & 티셔츠</a></li>
+							<li><a href="#">쇼츠</a></li>
+							<li><a href="#">후디 & 풀오버</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<p>Kids</p>
+							<li><a href="#">베이비 신발</a></li>
+							<li><a href="#">키즈 신발</a></li>
+							<li><a href="#">키즈 농구 신발</a></li>
+							<li><a href="#">키즈 러닝 신발</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="grid_hide grid" onmouseover="hideMenuon()" onmouseout="hideMenuout()">
+					<li>
+						<ul>
+							<li><a href="#">블레이저</a></li>
+							<li><a href="#">리액트</a></li>
+							<li><a href="#">페가수스</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">테니스 신발</a></li>
+							<li><a href="#">트레이닝 신발</a></li>
+							<li><a href="#">Sale 신발</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">조거 & 스웻팬츠</a></li>
+							<li><a href="#">스포츠 브라</a></li>
+							<li><a href="#">팬츠 & 타이츠</a></li>
+							<li><a href="#">양말</a></li>
+							<li><a href="#">요가</a></li>
+							<li><a href="#">NikeLab</a></li>
+							<li><a href="#">Sale 의류</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">키즈 조던 신발</a></li>
+							<li><a href="#">키즈 의류</a></li>
+							<li><a href="#">키즈 백팩</a></li>
+							<li><a href="#">키즈 양말</a></li>
+							<li><a href="#">Sale 키즈</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<main class="main9mb">
+			<ul class="main9mb_wrap">
+				<li class="h_btn">
+					<p>Featured</p>
+					<ul class="h_menu">
+						<li><a href="#">에어 포스 1</a></li>
+						<li><a href="#">조던 1</a></li>
+						<li><a href="#">에어맥스 97</a></li>
+						<li><a href="#">에어맥스 90</a></li>
+						<li><a href="#">블레이저</a></li>
+						<li><a href="#">리액트</a></li>
+						<li><a href="#">페가수스</a></li>
+					</ul>
+				</li>
+				<li class="h_btn">
+					<p>신발</p>
+					<ul class="h_menu">
+						<li><a href="#">전체 보기</a></li>
+						<li><a href="#">조던 신발</a></li>
+						<li><a href="#">러닝 신발</a></li>
+						<li><a href="#">농구 신발</a></li>
+						<li><a href="#">테니스 신발</a></li>
+						<li><a href="#">트레이닝 신발</a></li>
+						<li><a href="#">Sale 신발</a></li>
+					</ul>
+				</li>
+				<li class="h_btn">
+					<p>의류</p>
+					<ul class="h_menu">
+						<li><a href="#">전체 보기</a></li>
+						<li><a href="#">탑 & 티셔츠</a></li>
+						<li><a href="#">쇼츠</a></li>
+						<li><a href="#">후디 & 풀오버</a></li>
+						<li><a href="#">조거 & 스웻팬츠</a></li>
+						<li><a href="#">스포츠 브라</a></li>
+						<li><a href="#">팬츠 & 타이츠</a></li>
+						<li><a href="#">양말</a></li>
+						<li><a href="#">요가</a></li>
+						<li><a href="#">NikeLab</a></li>
+						<li><a href="#">Sale 의류</a></li>
+					</ul>
+				</li>
+				<li class="h_btn">
+					<p>Kids</p>
+					<ul class="h_menu">
+						<li><a href="#">베이비 신발</a></li>
+						<li><a href="#">키즈 신발</a></li>
+						<li><a href="#">키즈 농구 신발</a></li>
+						<li><a href="#">키즈 러닝 신발</a></li>
+						<li><a href="#">키즈 조던 신발</a></li>
+						<li><a href="#">키즈 의류</a></li>
+						<li><a href="#">키즈 백팩</a></li>
+						<li><a href="#">키즈 양말</a></li>
+						<li><a href="#">Sale 키즈</a></li>
+					</ul>
+				</li>
+			</ul>
+		</main>
+		<footer>
+			<div class="f_wrap">
+				<div class="f1">
+					<ul class="text">
+						<li class="menu">
+							<ul>
+								<li><a href="#">새로운 소식</a></li>
+								<li><a href="#">멤버가입</a></li>
+								<li><a href="#">매장안내</a></li>
+								<li><a href="#">나이키 저널</a></li>
+							</ul>
+						</li>
+						<li class="help ha">
+							<p>도움말</p>
+							<ul>
+								<li><a href="#">로그인 안내</a></li>
+								<li><a href="#">주문배송조회</a></li>
+								<li><a href="#">반품 정책</a></li>
+								<li><a href="#">결제 방법</a></li>
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">문의하기</a></li>
+							</ul>
+						</li>
+						<li class="about ha">
+							<p>ABOUT NIKE</p>
+							<ul>
+								<li><a href="#">소식</a></li>
+								<li><a href="#">채용</a></li>
+								<li><a href="#">투자자</a></li>
+								<li><a href="#">지속가능성</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="logo">
+						<a href="#"><i class="fa-brands fa-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-youtube"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="f2">
+					<div class="f2_1">
+						<div class="local">
+							<a href="#"><i class="fa-solid fa-location-dot"></i>대한민국</a>
+							<p>© 2023 Nike, Inc. All Rights Reserved</p>
+						</div>
+						<div class="info">
+							<ul>
+								<li><a href="#">이용약관</a></li>
+								<li><a href="#">개인정보처리방침</a></li>
+								<li><a href="#">위치 기반 서비스 약관</a></li>
+								<li><a href="#">영상정보처리기기 운영 방침</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="f2_2">
+						<div class="left">
+							(유)나이키코리아 대표 Kimberlee Lynn Chang Mendes, 킴벌리 린 창 멘데스 | 서울 강남구 테헤란로 152
+							강남파이낸스센터 30층 | 통신판매업신고번호 2011-서울강남-03461 | 등록번호 220-88-09068
+							<span> 사업자 정보 확인</span> <br /><br />고객센터 전화 문의 <span>080-022-0182</span> FAX
+							02-6744-5880 | 이메일 <span>service@nike.co.kr</span> | 호스팅서비스사업자 (유)나이키코리아
+						</div>
+						<div class="right">
+							현금 등으로 결제 시 안전 거래를 위해 나이키 쇼핑몰에서 가입하신 한국결제네트웍스 유한회사의
+							구매안전 서비스( <span>결제대금예치</span> )를 이용하실 수 있습니다. <br /><br />콘텐츠산업진흥법에
+							의한 콘텐츠 보호 안내 <span>자세히 보기</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script>
+		// 해결할 것
+		// 1. 마우스오버 상태에서 스크롤 할 때 top값 o
+		// 2. 스크롤 하다가 마우스 오버했을때 hd3 높이값
+		// if ((scrollTop = 0)) {
+		// 	function mover() {
+		// 		var m2;
+		// 		m2 = document.getElementById('m2');
+		// 		m2.classList.add('mm1');
+		// 	}
+		// 	function mout() {
+		// 		var m3;
+		// 		m3 = document.getElementById('m2');
+		// 		m2.classList.remove('mm1');
+		// 	}
+		// 	alert('11');
+		// }
+
+		// 마우스오버 했을때 스크롤을 위, 아래로 하면 m2가 추가돼서 포지션이 픽스 되고 탑값이 0이 된다
+		function mover() {
+			var beforePosition = document.documentElement.scrollTop;
+
+			document.addEventListener('scroll', function () {
+				var afterPosition = document.documentElement.scrollTop;
+
+				if (afterPosition > 0) {
+					if (beforePosition < afterPosition) {
+						// 스크롤 아래로
+						var m;
+						m = document.getElementById('m1');
+						m.classList.add('m2');
+					}
+				}
+				beforePosition = afterPosition;
+			});
+		}
+
+		// 마우스아웃 했을때 스크롤을 아래로 하면 마우스 오버했을때 추가된 m2를 지워준다
+		function mout() {
+			var beforePosition = document.documentElement.scrollTop;
+
+			document.addEventListener('scroll', function () {
+				var afterPosition = document.documentElement.scrollTop;
+
+				if (afterPosition > 50) {
+					if (beforePosition < afterPosition) {
+						// 스크롤 아래로
+						var m;
+						m = document.getElementById('m1');
+						m.classList.remove('m2');
+					}
+				}
+				beforePosition = afterPosition;
+			});
+		}
+
+		// 스크롤 하면 방향에 따라 m2를 추가하거나 지워준다. 평상시는 화면맨위일때 m2를 지워준다
+		var beforePosition = document.documentElement.scrollTop;
+
+		document.addEventListener('scroll', function () {
+			var afterPosition = document.documentElement.scrollTop;
+
+			if (afterPosition > 50) {
+				if (beforePosition < afterPosition) {
+					// 스크롤 아래로
+					var m;
+					m = document.getElementById('m1');
+					m.classList.remove('m2');
+				} else {
+					// 스크롤 위로
+
+					var m;
+					m = document.getElementById('m1');
+					m.classList.add('m2');
+				}
+			} else {
+				// 평상 시
+				var m;
+				m = document.getElementById('m1');
+				m.classList.remove('m2');
+			}
+			beforePosition = afterPosition;
+		});
+
+		var s1 = document.querySelector('.search2');
+		var s1bg = document.querySelector('.search2bg');
+		var searchBtn = document.querySelectorAll('.searchBtn');
+		var cancelBtn = document.querySelector('.cancel');
+
+		// var sb = document.querySelector('searchbtn');
+		for (var i = 0; i < 2; i++) {
+			searchBtn[i].onclick = function () {
+				// focus메서드를 사용해 온클릭시 커서가 input으로 가도록 만든다
+				$('#search2Input').focus();
+				s1.style.maxHeight = '1000px';
+				s1bg.style.maxHeight = '100vh';
+			};
+		}
+		cancelBtn.onclick = function () {
+			s1.style.maxHeight = '0px';
+			s1bg.style.maxHeight = '0px';
+		};
+		s1bg.onclick = function () {
+			s1.style.maxHeight = '0px';
+			s1bg.style.maxHeight = '0px';
+		};
+
+		var swiper = new Swiper('.slider1', {
+			direction: 'horizontal',
+			loop: false,
+			breakpoints: {
+				600: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 1.4,
+					spaceBetween: 10,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+				// dragSize: 100,
+			},
+		});
+
+		var swiper = new Swiper('.slider2', {
+			direction: 'horizontal',
+			loop: false,
+			breakpoints: {
+				600: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 1.4,
+					spaceBetween: 20,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+				// dragSize: 100,
+			},
+		});
+
+		var swiper = new Swiper('.slider3', {
+			direction: 'horizontal',
+			// allowTouchMove: false, 드레그로 넘기는 기능
+			loop: false,
+			breakpoints: {
+				600: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 1.4,
+					spaceBetween: 10,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+				// dragSize: 100,
+			},
+		});
+
+		var swiper = new Swiper('.slider4', {
+			direction: 'horizontal',
+			// allowTouchMove: false, 드레그로 넘기는 기능
+			loop: false,
+			breakpoints: {
+				600: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 1.4,
+					spaceBetween: 10,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+				// dragSize: 100,
+			},
+		});
+
+		var swiper = new Swiper('.slider5', {
+			direction: 'horizontal',
+			// allowTouchMove: false, 드레그로 넘기는 기능
+			loop: false,
+			breakpoints: {
+				600: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 1.4,
+					spaceBetween: 10,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+				// dragSize: 100,
+			},
+		});
+		var swiper = new Swiper('.slider6', {
+			direction: 'horizontal',
+			// allowTouchMove: false, 드레그로 넘기는 기능
+			loop: true,
+			loopedSlides: 2.1,
+			centeredSlides: true,
+			breakpoints: {
+				600: {
+					slidesPerView: 3.6,
+					slidesPerGroup: 1,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 1.4,
+					spaceBetween: 10,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+		});
+		var swiper = new Swiper('.slider7', {
+			direction: 'horizontal',
+			// allowTouchMove: false, 드레그로 넘기는 기능
+			loop: false,
+			breakpoints: {
+				600: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 1.4,
+					spaceBetween: 10,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+				// dragSize: 100,
+			},
+		});
+
+		var hideBtn = document.querySelector('.hideBtn');
+		var grid_hide = document.querySelector('.grid_hide');
+		hideBtn.addEventListener('mouseover', function () {
+			grid_hide.style.maxHeight = '500px';
+		});
+		hideBtn.addEventListener('mouseout', function () {
+			grid_hide.style.maxHeight = '0px';
+		});
+
+		//모바일 메뉴 열림
+		var m_menubtn = document.querySelector('.m_menubtn');
+		var m_menu = document.querySelector('.m_menu');
+		var m_menubg = document.querySelector('.m_menubg');
+		var m_close = document.querySelector('.close');
+		m_menubtn.addEventListener('click', function () {
+			m_menu.style.display = 'block';
+			m_menubg.style.display = 'block';
+			$('body')
+				.css({ overflow: 'hidden' })
+				.bind('touchmove', function (e) {
+					e.preventDefault();
+				});
+		});
+		m_close.addEventListener('click', function () {
+			m_menu.style.display = 'none';
+			m_menubg.style.display = 'none';
+			$('body').css({ overflow: '' }).unbind('touchmove');
+		});
+		m_menubg.addEventListener('click', function () {
+			m_menu.style.display = 'none';
+			m_menubg.style.display = 'none';
+		});
+
+		var h_btn = document.querySelectorAll('.h_btn');
+		var h_menu = document.querySelectorAll('.h_menu');
+		var scv = 1;
+
+		//메인 마지막부분 메뉴
+		$(function () {
+			$('.h_btn').on('click', function () {
+				const check = $(this).hasClass('view');
+
+				$('.h_btn').removeClass('view');
+
+				if (!check) {
+					$(this).addClass('view');
+				}
+			});
+		});
+		//푸터 메뉴
+		$(function () {
+			$('.ha').on('click', function () {
+				// .ha를 클릭했을때 view가 있는지 없는지 확인함
+				const check = $(this).hasClass('view');
+
+				// .ha를 클릭했을때 view가 있으면 true -> 리무브해줌
+				$('.ha').removeClass('view');
+
+				// !는 반대의 뜻, .ha를 클릭했을때 view가 없으면 flase -> 에드 해줌
+				if (!check) {
+					$(this).addClass('view');
+				}
+			});
+		});
+	</script>
+</html>
