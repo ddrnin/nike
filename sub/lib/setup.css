@@ -1,0 +1,103 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	/* font-size: 14px; */
+	/* line-height: 1; */
+	vertical-align: top;
+	/*	outline: 1px solid #999;*/
+}
+button {
+	/* -webkit-tap-highlight-color: transparent;
+	-webkit-appearance: none; */
+}
+ul,
+ol {
+	list-style: none;
+	font-size: 0px;
+}
+
+ul li,
+ol li {
+	display: inline-block;
+}
+
+a {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+
+body {
+	text-align: center;
+	overflow-x: hidden;
+}
+button {
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	font-family: inherit;
+	background: white;
+	border: none;
+	cursor: pointer;
+	font-weight: inherit;
+}
+span {
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+}
+div {
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+}
+p {
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+}
+.wrap {
+	display: inline-block;
+	width: 1000px;
+}
+
+.pc {
+	display: block !important; /*inline-block이 아니라 block*/
+}
+
+.mobile {
+	display: none !important;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 1280px) {
+	.pc {
+		display: none !important;
+	}
+	.mobile {
+		display: block !important; /*inline-block이 아니라 block*/
+	}
+
+	.wrap {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 800px) {
+}
+
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+}
+
+@media only screen and (min-width: 100px) and (max-width: 500px) {
+}

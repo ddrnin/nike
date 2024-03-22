@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="lib/setup.css" />
+		<link rel="stylesheet" href="style/sub1.css" />
+		<script src="./lib/jquery.js"></script>
+	</head>
+	<body>
+		<div class="top_title">
+			<div class="left">
+				<div class="name">에어포스 1 (103)</div>
+			</div>
+			<div class="right">
+				<div class="filter_btn">
+					<span class="view">필터 숨기기</span>
+					<span class="hide">필터 표시</span>
+					<svg
+						aria-hidden="true"
+						class="icon-filter-ds"
+						focusable="false"
+						viewBox="0 0 24 24"
+						role="img"
+						width="24px"
+						height="24px"
+						fill="none"
+					>
+						<path stroke="currentColor" stroke-width="1.5" d="M21 8.25H10m-5.25 0H3"></path>
+						<path
+							stroke="currentColor"
+							stroke-width="1.5"
+							d="M7.5 6v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+							clip-rule="evenodd"
+						></path>
+						<path stroke="currentColor" stroke-width="1.5" d="M3 15.75h10.75m5 0H21"></path>
+						<path
+							stroke="currentColor"
+							stroke-width="1.5"
+							d="M16.5 13.5v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+							clip-rule="evenodd"
+						></path>
+					</svg>
+				</div>
+				<button class="dropdown down">
+					<span>정렬 기준:</span>
+					<div class="down_arr"></div>
+				</button>
+				<div class="dropdown_menu">
+					<div class="dropdown_menu_wrap">
+						<button>추천순</button>
+						<button>최신순</button>
+						<button>높은 가격순</button>
+						<button>낮은 가격순</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top_title_m">
+			<p>에어포스 1</p>
+			<div class="cate"><button>신발</button></div>
+			<div class="mmenuf">
+				<div>103개의 결과</div>
+				<div class="m_modal_open_btn">
+					<button>
+						<p>필터</p>
+						<svg
+							aria-hidden="true"
+							class="icon-filter-ds"
+							focusable="false"
+							viewBox="0 0 24 24"
+							role="img"
+							width="24px"
+							height="24px"
+							fill="none"
+						>
+							<path stroke="currentColor" stroke-width="1.5" d="M21 8.25H10m-5.25 0H3"></path>
+							<path
+								stroke="currentColor"
+								stroke-width="1.5"
+								d="M7.5 6v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+								clip-rule="evenodd"
+							></path>
+							<path stroke="currentColor" stroke-width="1.5" d="M3 15.75h10.75m5 0H21"></path>
+							<path
+								stroke="currentColor"
+								stroke-width="1.5"
+								d="M16.5 13.5v0a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+								clip-rule="evenodd"
+							></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="mobile_filter_modal">
+			<div class="mobile_filter_modal_wrap">
+				<div class="modal_close_btn">
+					<svg fill="#111" viewBox="0 0 24 24">
+						<path
+							d="M12 0C9.813 0 7.8.533 5.96 1.6A11.793 11.793 0 0 0 1.6 5.96C.533 7.8 0 9.813 0 12s.533 4.2 1.6 6.04a11.793 11.793 0 0 0 4.36 4.36C7.8 23.467 9.813 24 12 24s4.2-.533 6.04-1.6a11.793 11.793 0 0 0 4.36-4.36C23.467 16.2 24 14.187 24 12s-.533-4.2-1.6-6.04a11.793 11.793 0 0 0-4.36-4.36C16.2.533 14.187 0 12 0zm5.2 15.28l-1.92 1.92L12 13.84 8.72 17.2 6.8 15.28 10.16 12 6.8 8.72 8.72 6.8 12 10.08l3.28-3.28 1.92 1.92L13.92 12l3.28 3.28z"
+						></path>
+					</svg>
+				</div>
+				<div class="filter_name">필터</div>
+				<div class="listset">
+					<fieldset>
+						<legend><h3>정렬 기준:</h3></legend>
+						<div class="input_box">
+							<div>
+								<input type="radio" name="group1" class id="radio_button" checked />
+								<label for="radio_button">추천순</label>
+							</div>
+							<div>
+								<input type="radio" name="group1" class id="radio_button" />
+								<label for="radio_button">최신순</label>
+							</div>
+							<div>
+								<input type="radio" name="group1" class id="radio_button" />
+								<label for="radio_button">높은 가격순</label>
+							</div>
+							<div>
+								<input type="radio" name="group1" class id="radio_button" />
+								<label for="radio_button">낮은 가격순</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="filters_nav">
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">성별</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">남성</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">여성</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">유니섹스</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">키즈</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">남아</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">키즈 연령</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">베이비(0~3 세)</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">리틀키즈(3~7 세)</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">주니어(7~15세)</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">가격대</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">50,000 - 100,000 원</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">100,000 - 150,000 원</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">150,000 - 200,000 원</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">할인율</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">30% Off and Up</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">20% Off and Up</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">색상</div>
+						</div>
+						<div class="check check_color">
+							<div class="check_wrap">
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">퍼플</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">블랙</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">레드</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">블루</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">화이트</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">브라운</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">그린</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">옐로우</span>
+								</button>
+								<button>
+									<div class="color_box_m"></div>
+									<span class="color_name">그레이</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">브랜드</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">나이키 스포츠웨어</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">NikeLab</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">스포츠</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">라이프스타일</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">농구</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">축구</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">댄스</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">추가 사이즈</div>
+						</div>
+						<div class="check">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">US 사이즈</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="filters_group_m">
+						<div class="label">
+							<div class="name">컬렉션</div>
+						</div>
+						<div class="check collec">
+							<div class="check_wrap">
+								<button>
+									<div class="check_box"></div>
+									<span class="name">테라 카이거</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">허라치</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">윈드러너</span>
+								</button>
+								<button>
+									<div class="check_box"></div>
+									<span class="name">티엠포</span>
+								</button>
+								<button class="collec_more_btn">
+									<span class="name">+ 더 보기</span>
+								</button>
+								<div class="collec_hidden_box">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">에어포스 1</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">코르테즈</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">엘리트</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">에어 리프트</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">메트콘</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">나이키 덩크</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">머큐리얼</span>
+									</button>
+									<button class="collec_hidden_btn">
+										<span class="name">- 숨기기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="result_box">
+			<div class="filter">
+				<div class="filter_wrap">
+					<div class="categories">
+						<div class="categories_wrap">신발</div>
+					</div>
+					<div class="filters_nav">
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">성별</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">남성</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">여성</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">유니섹스</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">키즈</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">남아</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">키즈 연령</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">베이비(0~3 세)</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">리틀키즈(3~7 세)</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">주니어(7~15세)</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">가격대</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">50,000 - 100,000 원</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">100,000 - 150,000 원</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">150,000 - 200,000 원</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">할인율</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">30% Off and Up</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">20% Off and Up</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">색상</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check check_color">
+								<div class="check_wrap">
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">퍼플</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">블랙</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">레드</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">블루</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">화이트</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">브라운</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">그린</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">옐로우</span>
+									</button>
+									<button>
+										<div class="color_box"></div>
+										<span class="color_name">그레이</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">브랜드</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">나이키 스포츠웨어</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">NikeLab</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">스포츠</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">라이프스타일</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">농구</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">축구</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">댄스</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">추가 사이즈</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">US 사이즈</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="filters_group">
+							<div class="label">
+								<div class="name">컬렉션</div>
+								<div class="filter_droparr"></div>
+							</div>
+							<div class="check collec">
+								<div class="check_wrap">
+									<button>
+										<div class="check_box"></div>
+										<span class="name">테라 카이거</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">허라치</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">윈드러너</span>
+									</button>
+									<button>
+										<div class="check_box"></div>
+										<span class="name">티엠포</span>
+									</button>
+									<button class="collec_more_btn">
+										<span class="name">+ 더 보기</span>
+									</button>
+									<div class="collec_hidden_box">
+										<button>
+											<div class="check_box"></div>
+											<span class="name">에어포스 1</span>
+										</button>
+										<button>
+											<div class="check_box"></div>
+											<span class="name">코르테즈</span>
+										</button>
+										<button>
+											<div class="check_box"></div>
+											<span class="name">엘리트</span>
+										</button>
+										<button>
+											<div class="check_box"></div>
+											<span class="name">에어 리프트</span>
+										</button>
+										<button>
+											<div class="check_box"></div>
+											<span class="name">메트콘</span>
+										</button>
+										<button>
+											<div class="check_box"></div>
+											<span class="name">나이키 덩크</span>
+										</button>
+										<button>
+											<div class="check_box"></div>
+											<span class="name">머큐리얼</span>
+										</button>
+										<button class="collec_hidden_btn">
+											<span class="name">- 숨기기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product_wrap">
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force1.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force2.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force3.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">여성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force4.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force5.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force6.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force7.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 에센셜</div>
+									<div class="sub_title">여성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force8.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 LV8</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force9.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 프로-테크</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force10.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 미드 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force11.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 LX NBHD</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force1.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force2.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force3.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">여성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force4.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force5.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force6.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force7.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 에센셜</div>
+									<div class="sub_title">여성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force8.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 LV8</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force9.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 프로-테크</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force10.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 미드 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force11.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 LX NBHD</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force1.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force2.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force3.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">여성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force4.png" alt="" /></div>
+								<div class="text">
+									<div class="info">베스트셀러</div>
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force5.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force6.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force7.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 에센셜</div>
+									<div class="sub_title">여성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force8.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 LV8</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force9.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 프로-테크</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force10.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 미드 `07</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+					<div class="product_card">
+						<figure>
+							<a href="#">
+								<div class="img"><img src="img/air-force11.png" alt="" /></div>
+								<div class="text">
+									<div class="title">나이키 에어 포스 1 `07 LX NBHD</div>
+									<div class="sub_title">남성 신발</div>
+									<div class="card_color">1개 색상</div>
+									<div class="price">139,000 원</div>
+								</div>
+							</a>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script>
+		// dropdown
+		$('.dropdown').click(function () {
+			if ($(this).hasClass('up')) {
+				$(this).removeClass('up').addClass('down');
+				$('.dropdown_menu').removeClass('view');
+			} else if ($(this).hasClass('down')) {
+				$(this).removeClass('down').addClass('up');
+				$('.dropdown_menu').addClass('view');
+			}
+		});
+		// filters hide btn
+		$('.filter_btn').click(function () {
+			if ($('.filter').hasClass('hide')) {
+				$('.filter_btn .view').css('display', 'block');
+				$('.filter_btn .hide').css('display', 'none');
+				$('.filter').removeClass('hide');
+			} else {
+				$('.filter').addClass('hide');
+				$('.filter_btn .view').css('display', 'none');
+				$('.filter_btn .hide').css('display', 'block');
+			}
+		});
+
+		// filters color_box
+		$(document).ready(function () {
+			var colors = [
+				'#8D429F',
+				'#000000',
+				'#E7352B',
+				'#1790C8',
+				'#ffffff',
+				'#825D41',
+				'#7BBA3C',
+				'#FED533',
+				'#808080',
+			];
+			$('.color_box').each(function (index) {
+				$(this).css('background-color', colors[index]);
+			});
+			$('.color_box_m').each(function (index) {
+				$(this).css('background-color', colors[index]);
+			});
+		});
+
+		// collec hidden btn
+		$('.collec_more_btn').click(function () {
+			$('.collec_hidden_box').css('display', 'block');
+			$(this).css('display', 'none');
+			$('.collec_hidden_btn').css('display', 'block');
+		});
+		$('.collec_hidden_btn').click(function () {
+			$('.collec_hidden_box').css('display', 'none');
+			$(this).css('display', 'none');
+			$('.collec_more_btn').css('display', 'flex');
+		});
+
+		$('.label').click(function () {
+			var $filtersGroup = $(this).closest('.filters_group');
+			if ($filtersGroup.hasClass('up')) {
+				$filtersGroup.removeClass('up').addClass('down');
+			} else {
+				$filtersGroup.addClass('up').removeClass('down');
+			}
+		});
+		// mobile modal
+		$('.m_modal_open_btn').click(function () {
+			$('.mobile_filter_modal').css('display', 'block');
+			$('body').css('overflow', 'hidden');
+		});
+		$('.modal_close_btn').click(function () {
+			$('.mobile_filter_modal').css('display', 'none');
+			$('body').css('overflow', 'auto');
+		});
+		// width 960초과하면 modal 종료
+		$(document).ready(function () {
+			$(window)
+				.on('resize', function () {
+					if ($('.mobile_filter_modal').width() > 960) {
+						$('body').css('overflow', 'auto');
+						$('.mobile_filter_modal').css('display', 'none');
+					} else {
+					}
+				})
+				.trigger('resize'); // Triggering resize event on page load
+		});
+	</script>
+</html>
